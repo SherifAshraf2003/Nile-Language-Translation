@@ -99,10 +99,10 @@ const JoinTeam = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What We're Looking For
+              What We&apos;re Looking For
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              We're seeking interpreters with experience in medical, legal,
+              We&apos;re seeking interpreters with experience in medical, legal,
               business, and community interpretation.
             </p>
           </div>
@@ -139,7 +139,7 @@ const JoinTeam = () => {
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                Apply Now – It's Easy
+                Apply Now - It&apos;s Easy
               </h2>
               <p className="text-muted-foreground text-lg">
                 Fill out the form below and upload your resume to get started.
@@ -302,12 +302,12 @@ const JoinTeam = () => {
             Questions About Joining?
           </h2>
           <p className="text-xl text-background/80 mb-8 max-w-2xl mx-auto">
-            We're here to help! Contact us if you have any questions about
+            We&apos;re here to help! Contact us if you have any questions about
             interpreter opportunities or the application process.
           </p>
           <div className="space-y-2 text-background/80">
             <p>Email: info@nlsindy.com</p>
-            <p>We'll respond to all inquiries within 24 hours</p>
+            <p>We&apos;ll respond to all inquiries within 24 hours</p>
           </div>
         </div>
       </section>

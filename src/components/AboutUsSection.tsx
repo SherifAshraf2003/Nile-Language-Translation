@@ -1,15 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  CheckCircle,
-  Users,
-  Globe,
-  Award,
-  Heart,
-  Scale,
-  Building2,
-  GraduationCap,
-} from "lucide-react";
+import { CheckCircle, Users, Globe, Award } from "lucide-react";
 import Link from "next/link";
 
 const AboutUsSection = () => {
@@ -74,9 +65,9 @@ const AboutUsSection = () => {
           <div className="bg-stone-green text-text-inverse rounded-3xl p-8 shadow-card">
             <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
             <p className="text-lg text-background/90 leading-relaxed mb-6">
-              "To connect people through the power of language, ensuring that
-              communication barriers never prevent understanding, access to
-              services, or meaningful connections."
+              &quot;To connect people through the power of language, ensuring
+              that communication barriers never prevent understanding, access to
+              services, or meaningful connections.&quot;
             </p>
             <div className="flex items-center space-x-2 text-sand-light">
               <CheckCircle className="h-5 w-5" />

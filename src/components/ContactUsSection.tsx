@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/app/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Clock, MessageCircle } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -92,11 +92,11 @@ const Contact = () => {
       <section className="py-20 bg-gradient-sand">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Let's Connect!
+            Let&apos;s Connect!
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to book an interpreter or have questions about our services?
-            We're here to help you communicate clearly and professionally.
+            We&apos;re here to help you communicate clearly and professionally.
           </p>
         </div>
       </section>
@@ -139,7 +139,7 @@ const Contact = () => {
                 Request an Interpreter
               </h2>
               <p className="text-muted-foreground text-lg">
-                Fill out the form below and we'll respond promptly with
+                Fill out the form below and we&apos;ll respond promptly with
                 availability and next steps.
               </p>
             </div>
