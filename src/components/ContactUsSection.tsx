@@ -89,12 +89,12 @@ const Contact = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-sand">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-sand">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6">
             Let&apos;s Connect!
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
             Ready to book an interpreter or have questions about our services?
             We&apos;re here to help you communicate clearly and professionally.
           </p>
@@ -102,24 +102,24 @@ const Contact = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <section className="py-12 sm:py-16 lg:py-20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
                 <Card key={index} className="shadow-card border-0 text-center">
-                  <CardContent className="p-8">
-                    <div className="flex items-center justify-center w-16 h-16 bg-gradient-hero rounded-2xl mb-4 mx-auto">
-                      <IconComponent className="h-8 w-8 text-foreground" />
+                  <CardContent className="p-6 sm:p-8">
+                    <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-hero rounded-2xl mb-3 sm:mb-4 mx-auto">
+                      <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-foreground" />
                     </div>
-                    <h3 className="text-lg font-semibold text-foreground mb-2">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-2">
                       {info.title}
                     </h3>
-                    <p className="text-ochre font-medium mb-1">
+                    <p className="text-ochre font-medium mb-1 text-sm sm:text-base">
                       {info.content}
                     </p>
-                    <p className="text-muted-foreground text-sm">
+                    <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
                       {info.description}
                     </p>
                   </CardContent>
@@ -131,35 +131,43 @@ const Contact = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20 bg-beige-light">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-beige-light">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-3 sm:mb-4">
                 Request an Interpreter
               </h2>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">
                 Fill out the form below and we&apos;ll respond promptly with
                 availability and next steps.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* Contact Form */}
               <div className="lg:col-span-2">
                 <Card className="shadow-card border-0">
                   <CardHeader>
-                    <CardTitle className="text-2xl text-foreground flex items-center">
-                      <MessageCircle className="h-6 w-6 mr-2 text-ochre" />
+                    <CardTitle className="text-xl sm:text-2xl lg:text-3xl text-foreground flex items-center">
+                      <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 mr-2 text-ochre" />
                       Interpreter Request Form
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="p-8">
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                  <CardContent className="p-4 sm:p-6 lg:p-8">
+                    <form
+                      onSubmit={handleSubmit}
+                      className="space-y-4 sm:space-y-6"
+                    >
                       {/* Contact Information */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                         <div>
-                          <Label htmlFor="fullName">Full Name *</Label>
+                          <Label
+                            htmlFor="fullName"
+                            className="text-sm sm:text-base"
+                          >
+                            Full Name *
+                          </Label>
                           <Input
                             id="fullName"
                             name="fullName"
@@ -170,7 +178,12 @@ const Contact = () => {
                           />
                         </div>
                         <div>
-                          <Label htmlFor="email">Email Address *</Label>
+                          <Label
+                            htmlFor="email"
+                            className="text-sm sm:text-base"
+                          >
+                            Email Address *
+                          </Label>
                           <Input
                             id="email"
                             name="email"
@@ -183,9 +196,14 @@ const Contact = () => {
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                         <div>
-                          <Label htmlFor="phone">Phone Number *</Label>
+                          <Label
+                            htmlFor="phone"
+                            className="text-sm sm:text-base"
+                          >
+                            Phone Number *
+                          </Label>
                           <Input
                             id="phone"
                             name="phone"
@@ -197,7 +215,12 @@ const Contact = () => {
                           />
                         </div>
                         <div>
-                          <Label htmlFor="organization">Organization</Label>
+                          <Label
+                            htmlFor="organization"
+                            className="text-sm sm:text-base"
+                          >
+                            Organization
+                          </Label>
                           <Input
                             id="organization"
                             name="organization"
@@ -211,7 +234,10 @@ const Contact = () => {
 
                       {/* Service Details */}
                       <div>
-                        <Label htmlFor="serviceType">
+                        <Label
+                          htmlFor="serviceType"
+                          className="text-sm sm:text-base"
+                        >
                           Type of Service Needed *
                         </Label>
                         <Select onValueChange={handleSelectChange} required>
@@ -250,9 +276,14 @@ const Contact = () => {
                         </Select>
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                         <div>
-                          <Label htmlFor="date">Preferred Date</Label>
+                          <Label
+                            htmlFor="date"
+                            className="text-sm sm:text-base"
+                          >
+                            Preferred Date
+                          </Label>
                           <Input
                             id="date"
                             name="date"
@@ -263,7 +294,12 @@ const Contact = () => {
                           />
                         </div>
                         <div>
-                          <Label htmlFor="location">Location/Platform</Label>
+                          <Label
+                            htmlFor="location"
+                            className="text-sm sm:text-base"
+                          >
+                            Location/Platform
+                          </Label>
                           <Input
                             id="location"
                             name="location"
@@ -276,7 +312,12 @@ const Contact = () => {
                       </div>
 
                       <div>
-                        <Label htmlFor="message">Additional Details</Label>
+                        <Label
+                          htmlFor="message"
+                          className="text-sm sm:text-base"
+                        >
+                          Additional Details
+                        </Label>
                         <Textarea
                           id="message"
                           name="message"
@@ -302,45 +343,47 @@ const Contact = () => {
               </div>
 
               {/* Quick Contact */}
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 <Card className="shadow-card border-0 bg-ochre text-background">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-4">
+                  <CardContent className="p-4 sm:p-6">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">
                       Need Immediate Assistance?
                     </h3>
-                    <p className="text-ochre-light mb-4">
+                    <p className="text-sm sm:text-base text-ochre-light mb-3 sm:mb-4">
                       For urgent interpretation needs or general questions,
                       reach out directly:
                     </p>
-                    <div className="space-y-3">
+                    <div className="space-y-2 sm:space-y-3">
                       <div className="flex items-center">
-                        <Mail className="h-5 w-5 mr-3" />
-                        <span>info@nlsindy.com</span>
+                        <Mail className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3" />
+                        <span className="text-sm sm:text-base">
+                          info@nlsindy.com
+                        </span>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
                 <Card className="shadow-card border-0">
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-foreground mb-4">
+                  <CardContent className="p-4 sm:p-6">
+                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-3 sm:mb-4">
                       What Happens Next?
                     </h3>
-                    <div className="space-y-3 text-sm text-muted-foreground">
+                    <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-muted-foreground">
                       <div className="flex items-start">
-                        <div className="w-6 h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-2 sm:mr-3 mt-0.5">
                           1
                         </div>
                         <p>We review your request within 24 hours</p>
                       </div>
                       <div className="flex items-start">
-                        <div className="w-6 h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-2 sm:mr-3 mt-0.5">
                           2
                         </div>
                         <p>We confirm availability and provide a quote</p>
                       </div>
                       <div className="flex items-start">
-                        <div className="w-6 h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-2 sm:mr-3 mt-0.5">
                           3
                         </div>
                         <p>We match you with the perfect interpreter</p>

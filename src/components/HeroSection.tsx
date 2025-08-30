@@ -18,41 +18,40 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-4">
-        <h1 className="text-4xl md:text-6xl font-bold text-text-inverse mb-6">
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-text-inverse mb-4 sm:mb-6 leading-tight">
           Professional Interpretation Services in Indiana & Beyond
         </h1>
-        <p className="text-xl md:text-2xl text-sand-light mb-8 font-medium">
+        <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-sand-light mb-6 sm:mb-8 font-medium">
           As the Nile connects lands, we connect voices.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12">
           <Button
             variant="hero"
             size="lg"
             asChild
-            className="text-lg px-8 py-4"
+            className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
           >
-            <Link href="/services">Book an Interpreter</Link>
+            <Link href="/contact">Get a Quote</Link>
           </Button>
           <Button
             variant="hero-secondary"
             size="lg"
             asChild
-            className="text-lg px-8 py-4"
+            className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4"
           >
-            <Link href="/join-team">Join Our Team</Link>
+            <Link href="/contact">Contact Us</Link>
           </Button>
         </div>
 
         {/* Intro Paragraph */}
-        <div className="mt-12 max-w-3xl mx-auto">
-          <p className="text-background/90 text-lg leading-relaxed">
-            At Nile Language Services (NLS), we believe language should never be
-            a barrier to communication. Based in Indiana, we provide onsite
-            Spanish interpretation for hospitals, businesses, schools, law
-            firms, and community events—while offering virtual interpretation
-            worldwide.
+        <div className="mt-8 sm:mt-12 max-w-3xl mx-auto">
+          <p className="text-background/90 text-sm sm:text-base lg:text-lg leading-relaxed px-4">
+            At Nile Language Services, we believe language should never be a
+            barrier to communication. Based in Indiana, we provide onsite
+            interpretation for hospitals, businesses, schools, law firms, and
+            community events—while offering virtual interpretation worldwide.
           </p>
         </div>
       </div>

@@ -190,7 +190,7 @@ All colors MUST be HSL.
   h4,
   h5,
   h6 {
-    font-family: --cormorantGaramond, serif;
+    font-family: var(--font-playfair), serif;
   }
 }
 
