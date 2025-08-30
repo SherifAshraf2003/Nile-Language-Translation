@@ -280,23 +280,6 @@ All colors MUST be HSL.
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Desert brand colors */
-  --color-sand: var(--sand);
-  --color-sand-light: var(--sand-light);
-  --color-sand-dark: var(--sand-dark);
-  --color-ochre: var(--ochre);
-  --color-ochre-light: var(--ochre-light);
-  --color-ochre-dark: var(--ochre-dark);
-  --color-beige: var(--beige);
-  --color-beige-light: var(--beige-light);
-  --color-beige-dark: var(--beige-dark);
-  --color-desert-brown: var(--desert-brown);
-  --color-desert-brown-light: var(--desert-brown-light);
-  --color-desert-brown-dark: var(--desert-brown-dark);
-  --color-stone-green: var(--stone-green);
-  --color-stone-green-light: var(--stone-green-light);
-  --color-stone-green-dark: var(--stone-green-dark);
-
   /* Text colors */
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
@@ -323,6 +306,23 @@ All colors MUST be HSL.
   --shadow-card: var(--shadow-card);
   --shadow-hero: var(--shadow-hero);
 
+  /* Color palette */
+  --color-sand: hsl(var(--sand));
+  --color-sand-light: hsl(var(--sand-light));
+  --color-sand-dark: hsl(var(--sand-dark));
+  --color-ochre: hsl(var(--ochre));
+  --color-ochre-light: hsl(var(--ochre-light));
+  --color-ochre-dark: hsl(var(--ochre-dark));
+  --color-beige: hsl(var(--beige));
+  --color-beige-light: hsl(var(--beige-light));
+  --color-beige-dark: hsl(var(--beige-dark));
+  --color-desert-brown: hsl(var(--desert-brown));
+  --color-desert-brown-light: hsl(var(--desert-brown-light));
+  --color-desert-brown-dark: hsl(var(--desert-brown-dark));
+  --color-stone-green: hsl(var(--stone-green));
+  --color-stone-green-light: hsl(var(--stone-green-light));
+  --color-stone-green-dark: hsl(var(--stone-green-dark));
+
   /* Keyframes */
   --keyframes-accordion-down: {
     from: {
@@ -346,121 +346,8 @@ All colors MUST be HSL.
   --animate-accordion-up: accordion-up 0.2s ease-out;
 }
 
-/* Custom utility classes for brand colors */
+/* Custom utility classes for gradients and shadows */
 @layer utilities {
-  .bg-sand {
-    background-color: hsl(var(--sand));
-  }
-  .bg-sand-light {
-    background-color: hsl(var(--sand-light));
-  }
-  .bg-sand-dark {
-    background-color: hsl(var(--sand-dark));
-  }
-
-  .bg-ochre {
-    background-color: hsl(var(--ochre));
-  }
-  .bg-ochre-light {
-    background-color: hsl(var(--ochre-light));
-  }
-  .bg-ochre-dark {
-    background-color: hsl(var(--ochre-dark));
-  }
-
-  .bg-beige {
-    background-color: hsl(var(--beige));
-  }
-  .bg-beige-light {
-    background-color: hsl(var(--beige-light));
-  }
-  .bg-beige-dark {
-    background-color: hsl(var(--beige-dark));
-  }
-
-  .bg-desert-brown {
-    background-color: hsl(var(--desert-brown));
-  }
-  .bg-desert-brown-light {
-    background-color: hsl(var(--desert-brown-light));
-  }
-  .bg-desert-brown-dark {
-    background-color: hsl(var(--desert-brown-dark));
-  }
-
-  .bg-stone-green {
-    background-color: hsl(var(--stone-green));
-  }
-  .bg-stone-green-light {
-    background-color: hsl(var(--stone-green-light));
-  }
-  .bg-stone-green-dark {
-    background-color: hsl(var(--stone-green-dark));
-  }
-
-  .text-sand {
-    color: hsl(var(--sand));
-  }
-  .text-sand-light {
-    color: hsl(var(--sand-light));
-  }
-  .text-sand-dark {
-    color: hsl(var(--sand-dark));
-  }
-
-  .text-ochre {
-    color: hsl(var(--ochre));
-  }
-  .text-ochre-light {
-    color: hsl(var(--ochre-light));
-  }
-  .text-ochre-dark {
-    color: hsl(var(--ochre-dark));
-  }
-
-  .text-beige {
-    color: hsl(var(--beige));
-  }
-  .text-beige-light {
-    color: hsl(var(--beige-light));
-  }
-  .text-beige-dark {
-    color: hsl(var(--beige-dark));
-  }
-
-  .text-desert-brown {
-    color: hsl(var(--desert-brown));
-  }
-  .text-desert-brown-light {
-    color: hsl(var(--desert-brown-light));
-  }
-  .text-desert-brown-dark {
-    color: hsl(var(--desert-brown-dark));
-  }
-
-  .text-stone-green {
-    color: hsl(var(--stone-green));
-  }
-  .text-stone-green-light {
-    color: hsl(var(--stone-green-light));
-  }
-  .text-stone-green-dark {
-    color: hsl(var(--stone-green-dark));
-  }
-
-  .text-text-primary {
-    color: hsl(var(--text-primary));
-  }
-  .text-text-secondary {
-    color: hsl(var(--text-secondary));
-  }
-  .text-text-muted {
-    color: hsl(var(--text-muted));
-  }
-  .text-text-inverse {
-    color: hsl(var(--text-inverse));
-  }
-
   .bg-gradient-hero {
     background: var(--gradient-hero);
   }
@@ -485,13 +372,6 @@ All colors MUST be HSL.
   }
   .shadow-hero {
     box-shadow: var(--shadow-hero);
-  }
-
-  .rounded-2xl {
-    border-radius: 1rem;
-  }
-  .rounded-3xl {
-    border-radius: 1.5rem;
   }
 
   .animate-accordion-down {

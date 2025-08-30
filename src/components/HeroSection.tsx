@@ -20,7 +20,8 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-text-inverse mb-4 sm:mb-6 leading-tight">
-          Professional Interpretation Services in Indiana & Beyond
+          An Indiana Agency Breaking Language Barriers Through{" "}
+          <span className="text-ochre">Interpretation</span>
         </h1>
         <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-sand-light mb-6 sm:mb-8 font-medium">
           As the Nile connects lands, we connect voices.

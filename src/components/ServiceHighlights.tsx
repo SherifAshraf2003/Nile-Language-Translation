@@ -44,7 +44,7 @@ const ServiceHighlights = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-beige-light">
+    <section className="py-12 sm:py-16 lg:py-20 bg-beige-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Service Cards */}
         <div className="text-center mb-12 sm:mb-16">
