@@ -9,7 +9,7 @@ const AboutUsSection = () => {
       icon: Award,
       title: "Certified & Experienced",
       description:
-        "CCHI nationally certified Spanish medical interpreter and Bridging the Gap (BTG) trained.",
+        "CCHI nationally certified & qualified Spanish medical interpreter and Bridging the Gap (BTG) trained.",
     },
     {
       icon: Globe,
@@ -62,7 +62,7 @@ const AboutUsSection = () => {
           </div>
 
           {/* Mission Card */}
-          <div className="bg-stone-green text-text-inverse rounded-3xl p-8 shadow-card">
+          <div className="bg-ochre text-text-inverse rounded-3xl p-8 shadow-card">
             <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
             <p className="text-lg text-background/90 leading-relaxed mb-6">
               &quot;To connect people through the power of language, ensuring
@@ -110,7 +110,7 @@ const AboutUsSection = () => {
 
         {/* CTA */}
         <div className="text-center">
-          <Button variant="cta" size="lg" asChild>
+          <Button className="bg-ochre" size="lg" asChild>
             <Link href="/about">Learn More About Us</Link>
           </Button>
         </div>

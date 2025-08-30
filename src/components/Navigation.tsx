@@ -39,9 +39,9 @@ const Navigation = () => {
                 key={item.name}
                 href={item.path}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-stone-green",
+                  "text-sm font-medium transition-colors hover:text-ochre",
                   isActive(item.path)
-                    ? "text-stone-green border-b-2 border-stone-green pb-1"
+                    ? "text-ochre border-b-2 border-ochre pb-1"
                     : "text-muted-foreground"
                 )}
               >
@@ -76,10 +76,8 @@ const Navigation = () => {
                   key={item.name}
                   href={item.path}
                   className={cn(
-                    "text-sm font-medium transition-colors hover:text-stone-green py-2",
-                    isActive(item.path)
-                      ? "text-stone-green"
-                      : "text-muted-foreground"
+                    "text-sm font-medium transition-colors hover:text-ochre py-2",
+                    isActive(item.path) ? "text-ochre" : "text-muted-foreground"
                   )}
                   onClick={() => setIsOpen(false)}
                 >

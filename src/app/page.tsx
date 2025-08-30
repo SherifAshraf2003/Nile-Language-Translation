@@ -2,7 +2,6 @@ import AboutUsSection from "../components/AboutUsSection";
 import ContactUsSection from "../components/ContactUsSection";
 import DetailedServicesSection from "../components/DetailedServiceSection";
 import HeroSection from "../components/HeroSection";
-import JoinTeamSection from "../components/JoinTeamSection";
 import ServiceHighlights from "../components/ServiceHighlights";
 
 export default function Home() {
@@ -19,9 +18,6 @@ export default function Home() {
 
       {/* Detailed Services Section - Comprehensive service breakdown */}
       <DetailedServicesSection />
-
-      {/* Join Team Section - Recruitment and team opportunities */}
-      <JoinTeamSection />
 
       {/* Contact Us Section - Contact information and form */}
       <ContactUsSection />

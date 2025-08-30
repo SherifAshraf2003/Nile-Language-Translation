@@ -10,141 +10,167 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Brand Colors - Nile Language Services with improved contrast */
-    --background: 45 15% 98%;
-    --foreground: 0 0% 8%;
+    /* Desert Neutrals - Inspired by pyramids and landscapes */
+    --background: 45 25% 96%; /* Beige #F5F0E6 */
+    --foreground: 25 35% 25%; /* Deep Earth Brown #5D270D */
 
-    --card: 45 15% 98%;
-    --card-foreground: 0 0% 8%;
+    --card: 45 25% 96%;
+    --card-foreground: 25 35% 25%;
 
-    --popover: 45 15% 98%;
-    --popover-foreground: 0 0% 8%;
+    --popover: 45 25% 96%;
+    --popover-foreground: 25 35% 25%;
 
-    /* Sand - Primary brand color with better contrast */
-    --primary: 38 35% 75%;
-    --primary-foreground: 0 0% 8%;
+    /* Sand - Primary desert color */
+    --primary: 35 45% 75%; /* Sand #E4CDA7 */
+    --primary-foreground: 25 35% 25%;
 
-    /* Stone Green - Secondary brand color with enhanced contrast */
-    --secondary: 85 25% 45%;
-    --secondary-foreground: 0 0% 98%;
+    /* Ochre - Secondary desert color */
+    --secondary: 30 50% 60%; /* Ochre #C99A5B */
+    --secondary-foreground: 45 25% 96%;
 
-    /* Beige - Muted tones with improved readability */
-    --muted: 40 25% 92%;
-    --muted-foreground: 0 0% 35%;
+    /* Beige - Muted desert tones */
+    --muted: 45 25% 96%; /* Beige #F5F0E6 */
+    --muted-foreground: 25 35% 35%;
 
-    /* Stone Green Accent with better contrast */
-    --accent: 85 25% 45%;
-    --accent-foreground: 0 0% 98%;
+    /* Ochre Accent */
+    --accent: 30 50% 60%; /* Ochre #C99A5B */
+    --accent-foreground: 45 25% 96%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 15% 98%;
+    --destructive-foreground: 45 25% 96%;
 
-    --border: 40 20% 80%;
-    --input: 40 20% 85%;
-    --ring: 85 25% 45%;
+    --border: 35 45% 85%;
+    --input: 35 45% 90%;
+    --ring: 30 50% 60%;
 
-    /* Custom Brand Variables with enhanced contrast */
-    --sand: 38 35% 75%;
-    --sand-light: 40 40% 88%;
-    --sand-dark: 35 30% 65%;
+    /* Desert Brand Variables */
+    --sand: 35 45% 75%; /* Sand #E4CDA7 */
+    --sand-light: 38 40% 85%;
+    --sand-dark: 32 40% 65%;
 
-    --stone-green: 85 25% 45%;
+    --ochre: 30 50% 60%; /* Ochre #C99A5B */
+    --ochre-light: 32 45% 70%;
+    --ochre-dark: 28 45% 50%;
+
+    --beige: 45 25% 96%; /* Beige #F5F0E6 */
+    --beige-light: 45 20% 98%;
+    --beige-dark: 45 30% 90%;
+
+    --desert-brown: 25 35% 25%; /* Deep Earth Brown #5D270D */
+    --desert-brown-light: 25 30% 35%;
+    --desert-brown-dark: 25 40% 20%;
+
+    --stone-green: 85 25% 45%; /* Stone Green #5F6F52 */
     --stone-green-light: 85 30% 55%;
-    --stone-green-dark: 82 22% 30%;
+    --stone-green-dark: 82 22% 35%;
 
-    --beige: 40 25% 92%;
-    --beige-light: 42 30% 96%;
-    --beige-dark: 38 20% 85%;
+    /* Desert text colors */
+    --text-primary: 25 35% 25%; /* Deep Earth Brown #5D270D */
+    --text-secondary: 25 35% 35%;
+    --text-muted: 25 35% 45%;
+    --text-inverse: 45 25% 96%; /* Beige #F5F0E6 */
 
-    /* High contrast text colors */
-    --text-primary: 0 0% 8%;
-    --text-secondary: 0 0% 25%;
-    --text-muted: 0 0% 45%;
-    --text-inverse: 45 15% 98%;
-
-    /* Gradients with better contrast */
+    /* Desert gradients */
     --gradient-hero: linear-gradient(
       135deg,
       hsl(var(--sand)) 0%,
-      hsl(var(--stone-green)) 100%
+      hsl(var(--ochre)) 100%
     );
     --gradient-sand: linear-gradient(
       180deg,
       hsl(var(--sand-light)) 0%,
       hsl(var(--sand)) 100%
     );
+    --gradient-ochre: linear-gradient(
+      135deg,
+      hsl(var(--ochre)) 0%,
+      hsl(var(--ochre-dark)) 100%
+    );
+    --gradient-desert: linear-gradient(
+      135deg,
+      hsl(var(--beige)) 0%,
+      hsl(var(--sand)) 100%
+    );
     --gradient-overlay: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
 
-    /* Enhanced shadows for better depth */
-    --shadow-soft: 0 4px 20px -4px hsl(var(--stone-green) / 0.15);
-    --shadow-card: 0 8px 30px -8px hsl(var(--sand-dark) / 0.25);
+    /* Desert shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(var(--ochre) / 0.15);
+    --shadow-card: 0 8px 30px -8px hsl(var(--desert-brown) / 0.25);
     --shadow-hero: 0 0 40px hsl(var(--sand) / 0.4);
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 45 25% 96%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-foreground: 25 35% 25%;
 
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary: 30 50% 60%;
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-primary-foreground: 45 25% 96%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 45 25% 96%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-accent-foreground: 25 35% 25%;
 
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 35 45% 85%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 30 50% 60%;
   }
 
   .dark {
-    --background: 0 0% 8%;
-    --foreground: 45 15% 98%;
+    --background: 25 35% 8%;
+    --foreground: 45 25% 96%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 45 15% 98%;
+    --card: 25 35% 8%;
+    --card-foreground: 45 25% 96%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 45 15% 98%;
+    --popover: 25 35% 8%;
+    --popover-foreground: 45 25% 96%;
 
-    --primary: 45 15% 98%;
-    --primary-foreground: 0 0% 8%;
+    --primary: 35 45% 75%;
+    --primary-foreground: 25 35% 25%;
 
-    --secondary: 85 25% 35%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 30 50% 45%;
+    --secondary-foreground: 45 25% 96%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 25 35% 15%;
+    --muted-foreground: 45 25% 70%;
 
-    --accent: 85 25% 35%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 30 50% 45%;
+    --accent-foreground: 45 25% 96%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 45 15% 98%;
+    --destructive-foreground: 45 25% 96%;
 
-    --border: 0 0% 20%;
-    --input: 0 0% 20%;
-    --ring: 85 25% 45%;
+    --border: 25 35% 20%;
+    --input: 25 35% 20%;
+    --ring: 30 50% 60%;
 
-    /* Dark mode brand colors */
-    --sand: 38 25% 65%;
-    --sand-light: 40 30% 75%;
-    --sand-dark: 35 20% 55%;
+    /* Dark mode desert colors */
+    --sand: 35 35% 60%;
+    --sand-light: 38 30% 70%;
+    --sand-dark: 32 30% 50%;
+
+    --ochre: 30 40% 40%;
+    --ochre-light: 32 35% 50%;
+    --ochre-dark: 28 35% 30%;
+
+    --beige: 45 15% 20%;
+    --beige-light: 45 15% 25%;
+    --beige-dark: 45 10% 15%;
+
+    --desert-brown: 25 25% 35%;
+    --desert-brown-light: 25 20% 45%;
+    --desert-brown-dark: 25 30% 25%;
 
     --stone-green: 85 25% 35%;
     --stone-green-light: 85 30% 45%;
-    --stone-green-dark: 82 22% 20%;
+    --stone-green-dark: 82 22% 25%;
 
-    --beige: 40 15% 20%;
-    --beige-light: 42 20% 25%;
-    --beige-dark: 38 10% 15%;
-
-    --text-primary: 45 15% 98%;
-    --text-secondary: 45 10% 85%;
-    --text-muted: 45 8% 70%;
-    --text-inverse: 0 0% 8%;
+    --text-primary: 45 25% 96%;
+    --text-secondary: 45 20% 85%;
+    --text-muted: 45 15% 70%;
+    --text-inverse: 25 35% 25%;
   }
 }
 
@@ -155,6 +181,16 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: --cormorantGaramond, serif;
   }
 }
 
@@ -244,16 +280,22 @@ All colors MUST be HSL.
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Custom brand colors */
+  /* Desert brand colors */
   --color-sand: var(--sand);
   --color-sand-light: var(--sand-light);
   --color-sand-dark: var(--sand-dark);
-  --color-stone-green: var(--stone-green);
-  --color-stone-green-light: var(--stone-green-light);
-  --color-stone-green-dark: var(--stone-green-dark);
+  --color-ochre: var(--ochre);
+  --color-ochre-light: var(--ochre-light);
+  --color-ochre-dark: var(--ochre-dark);
   --color-beige: var(--beige);
   --color-beige-light: var(--beige-light);
   --color-beige-dark: var(--beige-dark);
+  --color-desert-brown: var(--desert-brown);
+  --color-desert-brown-light: var(--desert-brown-light);
+  --color-desert-brown-dark: var(--desert-brown-dark);
+  --color-stone-green: var(--stone-green);
+  --color-stone-green-light: var(--stone-green-light);
+  --color-stone-green-dark: var(--stone-green-dark);
 
   /* Text colors */
   --color-text-primary: var(--text-primary);
@@ -316,14 +358,14 @@ All colors MUST be HSL.
     background-color: hsl(var(--sand-dark));
   }
 
-  .bg-stone-green {
-    background-color: hsl(var(--stone-green));
+  .bg-ochre {
+    background-color: hsl(var(--ochre));
   }
-  .bg-stone-green-light {
-    background-color: hsl(var(--stone-green-light));
+  .bg-ochre-light {
+    background-color: hsl(var(--ochre-light));
   }
-  .bg-stone-green-dark {
-    background-color: hsl(var(--stone-green-dark));
+  .bg-ochre-dark {
+    background-color: hsl(var(--ochre-dark));
   }
 
   .bg-beige {
@@ -336,6 +378,26 @@ All colors MUST be HSL.
     background-color: hsl(var(--beige-dark));
   }
 
+  .bg-desert-brown {
+    background-color: hsl(var(--desert-brown));
+  }
+  .bg-desert-brown-light {
+    background-color: hsl(var(--desert-brown-light));
+  }
+  .bg-desert-brown-dark {
+    background-color: hsl(var(--desert-brown-dark));
+  }
+
+  .bg-stone-green {
+    background-color: hsl(var(--stone-green));
+  }
+  .bg-stone-green-light {
+    background-color: hsl(var(--stone-green-light));
+  }
+  .bg-stone-green-dark {
+    background-color: hsl(var(--stone-green-dark));
+  }
+
   .text-sand {
     color: hsl(var(--sand));
   }
@@ -346,14 +408,14 @@ All colors MUST be HSL.
     color: hsl(var(--sand-dark));
   }
 
-  .text-stone-green {
-    color: hsl(var(--stone-green));
+  .text-ochre {
+    color: hsl(var(--ochre));
   }
-  .text-stone-green-light {
-    color: hsl(var(--stone-green-light));
+  .text-ochre-light {
+    color: hsl(var(--ochre-light));
   }
-  .text-stone-green-dark {
-    color: hsl(var(--stone-green-dark));
+  .text-ochre-dark {
+    color: hsl(var(--ochre-dark));
   }
 
   .text-beige {
@@ -364,6 +426,26 @@ All colors MUST be HSL.
   }
   .text-beige-dark {
     color: hsl(var(--beige-dark));
+  }
+
+  .text-desert-brown {
+    color: hsl(var(--desert-brown));
+  }
+  .text-desert-brown-light {
+    color: hsl(var(--desert-brown-light));
+  }
+  .text-desert-brown-dark {
+    color: hsl(var(--desert-brown-dark));
+  }
+
+  .text-stone-green {
+    color: hsl(var(--stone-green));
+  }
+  .text-stone-green-light {
+    color: hsl(var(--stone-green-light));
+  }
+  .text-stone-green-dark {
+    color: hsl(var(--stone-green-dark));
   }
 
   .text-text-primary {
@@ -384,6 +466,12 @@ All colors MUST be HSL.
   }
   .bg-gradient-sand {
     background: var(--gradient-sand);
+  }
+  .bg-gradient-ochre {
+    background: var(--gradient-ochre);
+  }
+  .bg-gradient-desert {
+    background: var(--gradient-desert);
   }
   .bg-gradient-overlay {
     background: var(--gradient-overlay);
@@ -411,6 +499,14 @@ All colors MUST be HSL.
   }
   .animate-accordion-up {
     animation: accordion-up 0.2s ease-out;
+  }
+
+  /* Font utilities */
+  .font-inter {
+    font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  }
+  .font-playfair {
+    font-family: var(--font-playfair), serif;
   }
 }
 

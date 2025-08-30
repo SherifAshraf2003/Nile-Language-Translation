@@ -254,7 +254,7 @@ const JoinTeam = () => {
                   {/* Resume Upload */}
                   <div>
                     <Label>Resume/CV Upload</Label>
-                    <div className="mt-2 border-2 border-dashed border-border rounded-lg p-8 text-center hover:border-stone-green transition-colors">
+                    <div className="mt-2 border-2 border-dashed border-border rounded-lg p-8 text-center hover:border-ochre transition-colors">
                       <Upload className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                       <p className="text-muted-foreground">
                         Click to upload your resume or drag and drop
@@ -296,7 +296,7 @@ const JoinTeam = () => {
       </section>
 
       {/* Contact Info */}
-      <section className="py-20 bg-stone-green text-background">
+      <section className="py-20 bg-ochre text-background">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Questions About Joining?

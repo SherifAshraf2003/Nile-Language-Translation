@@ -116,7 +116,7 @@ const Contact = () => {
                     <h3 className="text-lg font-semibold text-foreground mb-2">
                       {info.title}
                     </h3>
-                    <p className="text-stone-green font-medium mb-1">
+                    <p className="text-ochre font-medium mb-1">
                       {info.content}
                     </p>
                     <p className="text-muted-foreground text-sm">
@@ -150,7 +150,7 @@ const Contact = () => {
                 <Card className="shadow-card border-0">
                   <CardHeader>
                     <CardTitle className="text-2xl text-foreground flex items-center">
-                      <MessageCircle className="h-6 w-6 mr-2 text-stone-green" />
+                      <MessageCircle className="h-6 w-6 mr-2 text-ochre" />
                       Interpreter Request Form
                     </CardTitle>
                   </CardHeader>
@@ -303,12 +303,12 @@ const Contact = () => {
 
               {/* Quick Contact */}
               <div className="space-y-6">
-                <Card className="shadow-card border-0 bg-stone-green text-background">
+                <Card className="shadow-card border-0 bg-ochre text-background">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-4">
                       Need Immediate Assistance?
                     </h3>
-                    <p className="text-stone-green-light mb-4">
+                    <p className="text-ochre-light mb-4">
                       For urgent interpretation needs or general questions,
                       reach out directly:
                     </p>
@@ -328,19 +328,19 @@ const Contact = () => {
                     </h3>
                     <div className="space-y-3 text-sm text-muted-foreground">
                       <div className="flex items-start">
-                        <div className="w-6 h-6 bg-stone-green text-background rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                        <div className="w-6 h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
                           1
                         </div>
                         <p>We review your request within 24 hours</p>
                       </div>
                       <div className="flex items-start">
-                        <div className="w-6 h-6 bg-stone-green text-background rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                        <div className="w-6 h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
                           2
                         </div>
                         <p>We confirm availability and provide a quote</p>
                       </div>
                       <div className="flex items-start">
-                        <div className="w-6 h-6 bg-stone-green text-background rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
+                        <div className="w-6 h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-3 mt-0.5">
                           3
                         </div>
                         <p>We match you with the perfect interpreter</p>

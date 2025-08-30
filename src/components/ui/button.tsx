@@ -18,11 +18,11 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        // Nile Language Services variants with improved contrast
-        hero: "bg-sand text-text-primary border-2 border-stone-green hover:bg-stone-green hover:text-text-inverse shadow-soft transition-all duration-300 font-semibold",
+        // Nile Language Services variants with desert colors
+        hero: "bg-sand text-text-primary border-2 border-ochre hover:bg-ochre hover:text-text-inverse shadow-soft transition-all duration-300 font-semibold",
         "hero-secondary":
           "bg-transparent text-text-inverse border-2 border-background hover:bg-background hover:text-text-primary shadow-soft transition-all duration-300 font-semibold",
-        cta: "bg-stone-green text-text-inverse hover:bg-stone-green-dark shadow-card transition-all duration-300 font-semibold",
+        cta: "bg-ochre text-text-inverse hover:bg-ochre-dark shadow-card transition-all duration-300 font-semibold",
         contact:
           "bg-sand text-text-primary hover:bg-sand-dark shadow-soft transition-all duration-300",
       },

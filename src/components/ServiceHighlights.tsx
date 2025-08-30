@@ -75,7 +75,7 @@ const ServiceHighlights = () => {
                     {service.description}
                   </p>
                   <div className="text-center">
-                    <span className="inline-block bg-stone-green text-text-inverse px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="inline-block bg-ochre text-text-inverse px-3 py-1 rounded-full text-sm font-medium">
                       {service.location}
                     </span>
                   </div>

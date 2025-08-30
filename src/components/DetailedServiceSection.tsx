@@ -96,7 +96,7 @@ const DetailedServicesSection = () => {
                       <h3 className="text-xl font-bold text-text-primary">
                         {service.title}
                       </h3>
-                      <span className="inline-block bg-stone-green text-text-inverse px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="inline-block bg-ochre text-text-inverse px-3 py-1 rounded-full text-sm font-medium">
                         {service.subtitle}
                       </span>
                     </div>
@@ -109,7 +109,7 @@ const DetailedServicesSection = () => {
                   <ul className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="h-5 w-5 text-stone-green mr-3 flex-shrink-0" />
+                        <CheckCircle className="h-5 w-5 text-ochre mr-3 flex-shrink-0" />
                         <span className="text-text-secondary text-sm">
                           {feature}
                         </span>
@@ -155,7 +155,7 @@ const DetailedServicesSection = () => {
         </div>
 
         {/* Language Availability */}
-        <div className="bg-stone-green text-text-inverse rounded-3xl p-8 text-center">
+        <div className="bg-ochre text-text-inverse rounded-3xl p-8 text-center">
           <h3 className="text-2xl font-bold mb-4">Languages Available</h3>
           <p className="text-background/90 mb-6 max-w-2xl mx-auto">
             Currently offering Spanish interpretation with plans to expand into
