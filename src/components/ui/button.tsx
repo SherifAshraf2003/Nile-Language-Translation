@@ -19,7 +19,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Nile Language Services variants with desert colors
-        hero: "bg-sand text-text-primary border-2 border-ochre hover:bg-ochre hover:text-text-inverse shadow-soft transition-all duration-300 font-semibold",
+        hero: " text-text-primary border-2 border-white bg-ochre hover:bg-ochre/70  hover:text-text-inverse shadow-soft transition-all duration-300 font-semibold",
         "hero-secondary":
           "bg-transparent text-text-inverse border-2 border-background hover:bg-background hover:text-text-primary shadow-soft transition-all duration-300 font-semibold",
         cta: "bg-ochre text-text-inverse hover:bg-ochre-dark shadow-card transition-all duration-300 font-semibold",

@@ -1,3 +1,4 @@
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,8 +9,10 @@ import {
   Building2,
   GraduationCap,
   Pencil,
+  Phone,
 } from "lucide-react";
 import Link from "next/link";
+import { motion, easeOut, easeInOut } from "framer-motion";
 
 const ServiceHighlights = () => {
   const services = [
@@ -18,21 +21,32 @@ const ServiceHighlights = () => {
       title: "Onsite Interpretation",
       description:
         "Professional in-person interpretation services throughout Indiana for hospitals, businesses, schools, and legal settings.",
-      location: "Indiana Only",
+      gradient: "from-blue-500 to-cyan-500",
+      delay: 0.1,
     },
     {
       icon: Globe,
       title: "Virtual Interpretation",
       description:
-        "Remote interpretation via phone (OPI) or video (VRI) for clients worldwide. Perfect for global businesses and online events.",
-      location: "Worldwide",
+        "NLS provides both scheduled and on-demand video interpretation services.",
+      gradient: "from-purple-500 to-pink-500",
+      delay: 0.2,
     },
     {
       icon: Pencil,
       title: "Document Translation",
       description:
-        "CCHI certified document translation for legal documents, personal documents, posters, books, brochures and much more. ",
-      location: "Certified & Experienced",
+        "Document translation for legal documents, personal documents, posters, books, brochures and much more.",
+      gradient: "from-green-500 to-emerald-500",
+      delay: 0.3,
+    },
+    {
+      icon: Phone,
+      title: "Phone Interpretation",
+      description:
+        "NLS provides both scheduled and on-demand telephone interpretation services.",
+      gradient: "from-orange-500 to-red-500",
+      delay: 0.4,
     },
   ];
 
@@ -43,82 +57,380 @@ const ServiceHighlights = () => {
     { icon: GraduationCap, name: "Education", color: "text-purple-500" },
   ];
 
-  return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-beige-dark">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Service Cards */}
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-text-primary mb-4 sm:mb-6">
-            Our Services
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-text-secondary max-w-2xl mx-auto px-4">
-            We offer comprehensive interpretation services tailored to meet your
-            specific communication needs.
-          </p>
-        </div>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10 mb-12 sm:mb-16">
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: easeOut,
+      },
+    },
+  };
+
+  const iconVariants = {
+    hidden: {
+      scale: 0,
+      rotate: -180,
+    },
+    visible: {
+      scale: 1,
+      rotate: 0,
+      transition: {
+        duration: 0.5,
+        ease: easeInOut,
+      },
+    },
+  };
+
+  const titleVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.2,
+      },
+    },
+  };
+
+  const descriptionVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 0.3,
+      },
+    },
+  };
+
+  const buttonVariants = {
+    hidden: {
+      opacity: 0,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.4,
+        delay: 0.4,
+      },
+    },
+    hover: {
+      scale: 1.05,
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-beige-dark via-beige-light to-beige-dark relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Large floating orbs */}
+        <motion.div
+          className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-ochre/20 via-ochre/10 to-amber-800 rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            rotate: [0, 180, 360],
+            x: [0, 30, 0],
+            y: [0, -20, 0],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-ochre/15 via-ochre/8 to-amber-800 rounded-full blur-3xl"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            rotate: [360, 180, 0],
+            x: [0, -25, 0],
+            y: [0, 15, 0],
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+
+        {/* Medium floating orbs */}
+        <motion.div
+          className="absolute top-1/3 left-10 w-64 h-64 bg-gradient-to-br from-ochre/12 to-amber-800 rounded-full blur-2xl"
+          animate={{
+            scale: [1, 1.4, 1],
+            rotate: [0, 90, 180, 270, 360],
+            x: [0, 20, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/3 right-10 w-56 h-56 bg-gradient-to-tl from-ochre/10 to-amber-800 rounded-full blur-2xl"
+          animate={{
+            scale: [1.3, 1, 1.3],
+            rotate: [360, 270, 180, 90, 0],
+            y: [0, -15, 0],
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+
+        {/* Small floating particles */}
+        <motion.div
+          className="absolute top-1/4 right-1/4 w-32 h-32 bg-gradient-to-br from-ochre/8 to-amber-800 rounded-full blur-xl"
+          animate={{
+            scale: [1, 1.5, 1],
+            rotate: [0, 360],
+            x: [0, 40, 0],
+            y: [0, -30, 0],
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-tr from-ochre/6 to-amber-800 rounded-full blur-lg"
+          animate={{
+            scale: [1.2, 1, 1.2],
+            rotate: [360, 0],
+            x: [0, -25, 0],
+            y: [0, 20, 0],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "linear",
+          }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Header Section */}
+        <motion.div
+          className="text-center mb-16 sm:mb-20"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h2
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-text-primary mb-6 sm:mb-8 bg-gradient-to-r from-text-primary to-ochre bg-clip-text "
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Our Services
+          </motion.h2>
+          <motion.p
+            className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto px-4 leading-relaxed"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            We offer comprehensive interpretation services tailored to meet your
+            specific communication needs with precision and cultural
+            sensitivity.
+          </motion.p>
+        </motion.div>
+
+        {/* Service Cards Grid */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-16 sm:mb-20"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+        >
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card
+              <motion.div
                 key={index}
-                className="shadow-card hover:shadow-lg transition-shadow duration-300 border-0"
+                variants={cardVariants}
+                whileHover={{
+                  y: -10,
+                  transition: { duration: 0.3, ease: "easeOut" },
+                }}
+                className="group"
               >
-                <CardContent className="p-6 sm:p-8 lg:p-10">
-                  <div className="flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-hero rounded-2xl mb-4 sm:mb-6 mx-auto">
-                    <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-text-primary" />
-                  </div>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold text-text-primary mb-3 sm:mb-4 text-center">
-                    {service.title}
-                  </h3>
-                  <p className="text-sm sm:text-base lg:text-lg text-text-secondary text-center mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="text-center">
-                    <span className="inline-block bg-ochre text-text-inverse px-3 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm lg:text-base font-medium">
-                      {service.location}
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
+                <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm overflow-hidden relative">
+                  {/* Gradient overlay on hover */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                  />
+
+                  <CardContent className="p-8 sm:p-10 lg:p-12 relative z-10">
+                    {/* Icon Container */}
+                    <motion.div
+                      className={`flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br ${service.gradient} rounded-3xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110`}
+                      variants={iconVariants}
+                      whileHover={{
+                        rotate: [0, -10, 10, 0],
+                        transition: { duration: 0.6 },
+                      }}
+                    >
+                      <IconComponent className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-white" />
+                    </motion.div>
+
+                    {/* Title */}
+                    <motion.h3
+                      className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-4 sm:mb-6 text-center group-hover:text-ochre transition-colors duration-300"
+                      variants={titleVariants}
+                    >
+                      {service.title}
+                    </motion.h3>
+
+                    {/* Description */}
+                    <motion.p
+                      className="text-base sm:text-lg lg:text-xl text-text-secondary text-center mb-6 leading-relaxed"
+                      variants={descriptionVariants}
+                    >
+                      {service.description}
+                    </motion.p>
+
+                    {/* Learn More Button */}
+                    <motion.div
+                      className="text-center"
+                      variants={buttonVariants}
+                    >
+                      <Link
+                        href="/services"
+                        className="inline-block bg-gradient-to-r from-ochre to-ochre/80 text-text-inverse px-6 py-3 rounded-full text-sm sm:text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-ochre/90 hover:to-ochre"
+                      >
+                        Learn More
+                      </Link>
+                    </motion.div>
+                  </CardContent>
+                </Card>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
 
-        {/* Industries We Serve */}
-        <div className="text-center mb-8 sm:mb-12">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-6 sm:mb-8">
+        {/* Industries Section */}
+        <motion.div
+          className="text-center mb-16 sm:mb-20"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h3
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary mb-8 sm:mb-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             Industries We Serve
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 lg:gap-8">
+          </motion.h3>
+          <motion.div
+            className="flex flex-wrap justify-center gap-8 sm:gap-12 lg:gap-16"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
               return (
-                <div
+                <motion.div
                   key={index}
-                  className="flex flex-col items-center space-y-2 sm:space-y-3"
+                  className="flex flex-col items-center space-y-4 group cursor-pointer"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { duration: 0.3 },
+                  }}
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 bg-background rounded-full flex items-center justify-center shadow-soft">
+                  <motion.div
+                    className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-ochre/10 group-hover:to-transparent"
+                    whileHover={{
+                      rotate: 360,
+                      transition: { duration: 0.6 },
+                    }}
+                  >
                     <IconComponent
-                      className={`h-5 w-5 sm:h-6 sm:w-6 lg:h-7 lg:w-7 ${industry.color}`}
+                      className={`h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 ${industry.color} group-hover:scale-110 transition-transform duration-300`}
                     />
-                  </div>
-                  <span className="text-xs sm:text-sm lg:text-base font-medium text-text-primary">
+                  </motion.div>
+                  <span className="text-sm sm:text-base lg:text-lg font-semibold text-text-primary group-hover:text-ochre transition-colors duration-300">
                     {industry.name}
                   </span>
-                </div>
+                </motion.div>
               );
             })}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* CTA */}
-        <div className="text-center">
-          <Button variant="cta" size="lg" asChild>
-            <Link href="/services">View All Services</Link>
-          </Button>
-        </div>
+        {/* CTA Section */}
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+          >
+            <Button
+              variant="cta"
+              size="lg"
+              asChild
+              className="bg-gradient-to-r from-ochre to-ochre/80 hover:from-ochre/90 hover:to-ochre shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            >
+              <Link href="/services">View All Services</Link>
+            </Button>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );
