@@ -180,7 +180,7 @@ const ServiceHighlights = () => {
           >
             We offer comprehensive interpretation services tailored to meet your
             specific communication needs with precision and cultural
-            sensitivity.
+            understanding.
           </motion.p>
         </motion.div>
 

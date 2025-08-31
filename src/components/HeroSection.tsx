@@ -175,9 +175,7 @@ const HeroSection = () => {
           variants={itemVariants}
         >
           An Indiana Agency<br></br>
-          <span className="bg-gradient-to-r from-ochre to-amber-400 bg-clip-text text-transparent">
-            Breaking Language Barriers
-          </span>
+          Breaking Language Barriers
           <br></br>Through Interpretation
         </motion.h1>
 
@@ -185,7 +183,7 @@ const HeroSection = () => {
           className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-sand-light mb-6 sm:mb-8 font-medium"
           variants={itemVariants}
         >
-          As the Nile connects lands, we connect voices.
+          As the Nile connects lands, we connect people.
         </motion.p>
 
         <motion.div
@@ -203,7 +201,7 @@ const HeroSection = () => {
               variant="hero"
               size="lg"
               asChild
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-ochre to-amber-600 hover:from-amber-600 hover:to-ochre shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="text-base text-white sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500  shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               <Link href="/contact">Get a Quote</Link>
             </Button>
@@ -218,7 +216,7 @@ const HeroSection = () => {
               variant="hero"
               size="lg"
               asChild
-              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white hover:bg-white hover:text-ochre shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="text-base text-white sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500  shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               <Link href="/contact">Contact Us</Link>
             </Button>
