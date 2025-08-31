@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/app/hooks/use-toast";
-import { Mail, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Mail, MapPin, Clock, MessageCircle, Phone } from "lucide-react";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -136,8 +136,16 @@ const Contact = () => {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-3 sm:mb-4">
-                Request an Interpreter
+                Do you have a Question ?
               </h2>
+              <h3 className=" text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-amber-400 font-bold mb-3 sm:mb-4">
+                Contact Us
+              </h3>
+
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-4">
+                If you need a Quote or want to contact us please send us a
+                message or call us.
+              </p>
               <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">
                 Fill out the form below and we&apos;ll respond promptly with
                 availability and next steps.
@@ -333,7 +341,7 @@ const Contact = () => {
                         type="submit"
                         variant="cta"
                         size="lg"
-                        className="w-full"
+                        className="w-full text-white"
                       >
                         Submit Request
                       </Button>
@@ -349,7 +357,7 @@ const Contact = () => {
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">
                       Need Immediate Assistance?
                     </h3>
-                    <p className="text-sm sm:text-base text-ochre-light mb-3 sm:mb-4">
+                    <p className="text-sm sm:text-base text-gray-100 mb-3 sm:mb-4">
                       For urgent interpretation needs or general questions,
                       reach out directly:
                     </p>
@@ -358,6 +366,18 @@ const Contact = () => {
                         <Mail className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3" />
                         <span className="text-sm sm:text-base">
                           info@nlsindy.com
+                        </span>
+                      </div>
+                      <div className="flex items-center">
+                        <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3" />
+                        <span className="text-sm sm:text-base">
+                          +1 (765) 586-4317
+                        </span>
+                      </div>
+                      <div className="flex items-center">
+                        <Phone className="h-4 w-4 sm:h-5 sm:w-5 mr-2 sm:mr-3" />
+                        <span className="text-sm sm:text-base">
+                          +1 (765) 532-4052
                         </span>
                       </div>
                     </div>
@@ -374,7 +394,7 @@ const Contact = () => {
                         <div className="w-5 h-5 sm:w-6 sm:h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-2 sm:mr-3 mt-0.5">
                           1
                         </div>
-                        <p>We review your request within 24 hours</p>
+                        <p>We review your request within a couple hours</p>
                       </div>
                       <div className="flex items-start">
                         <div className="w-5 h-5 sm:w-6 sm:h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-2 sm:mr-3 mt-0.5">
@@ -386,7 +406,7 @@ const Contact = () => {
                         <div className="w-5 h-5 sm:w-6 sm:h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-2 sm:mr-3 mt-0.5">
                           3
                         </div>
-                        <p>We match you with the perfect interpreter</p>
+                        <p>We match you with a dedicated interpreter</p>
                       </div>
                     </div>
                   </CardContent>

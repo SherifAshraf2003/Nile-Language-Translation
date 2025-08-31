@@ -64,6 +64,8 @@ All colors MUST be HSL.
     --stone-green-light: 85 30% 55%;
     --stone-green-dark: 82 22% 35%;
 
+    --sage-green: 80 18% 76%; /* Sage Green #bfc8b5 */
+
     /* Desert text colors */
     --text-primary: 25 35% 25%; /* Deep Earth Brown #5D270D */
     --text-secondary: 25 35% 35%;
@@ -166,6 +168,8 @@ All colors MUST be HSL.
     --stone-green: 85 25% 35%;
     --stone-green-light: 85 30% 45%;
     --stone-green-dark: 82 22% 25%;
+
+    --sage-green: 80 15% 65%; /* Dark mode sage green */
 
     --text-primary: 45 25% 96%;
     --text-secondary: 45 20% 85%;
@@ -285,6 +289,7 @@ All colors MUST be HSL.
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
   --color-text-inverse: var(--text-inverse);
+  --color-sage-green: var(--sage-green);
 
   /* Sidebar colors */
   --color-sidebar-background: var(--sidebar-background);

@@ -17,9 +17,8 @@ const AboutUsSection = () => {
   const reasons = [
     {
       icon: Award,
-      title: "Certified & Experienced",
-      description:
-        "CCHI nationally certified & qualified Spanish medical interpreter and Bridging the Gap (BTG) trained.",
+      title: "Experienced",
+      description: "Certified & qualified Spanish medical interpreters.",
       gradient: "from-yellow-500 to-amber-500",
       delay: 0.1,
     },
@@ -27,7 +26,7 @@ const AboutUsSection = () => {
       icon: Globe,
       title: "Flexible Services",
       description:
-        "Onsite interpretation in Indiana or virtual interpretation worldwide.",
+        "Onsite interpretation in Indiana & virtual interpretation worldwide.",
       gradient: "from-blue-500 to-cyan-500",
       delay: 0.2,
     },
@@ -264,16 +263,16 @@ const AboutUsSection = () => {
                   }}
                   className="group"
                 >
-                  <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-[#CFE6EC] backdrop-blur-sm overflow-hidden relative">
+                  <Card className="h-full shadow-2xl hover:shadow-3xl transition-all duration-500 bg-beige-dark backdrop-blur-sm overflow-hidden relative border-2 border-amber-500">
                     {/* Gradient overlay on hover */}
                     <div
-                      className={`absolute inset-0 bg-[#EFE8DE] opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                      className={`absolute inset-0   opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                     />
 
                     <CardContent className="p-8 sm:p-10 relative z-10">
                       {/* Icon Container */}
                       <motion.div
-                        className={`flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-[#EFE8DE] rounded-2xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110`}
+                        className={`flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-[#e3d7c6] rounded-2xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110`}
                         variants={iconVariants}
                         whileHover={{
                           rotate: [0, -10, 10, 0],
@@ -285,7 +284,7 @@ const AboutUsSection = () => {
 
                       {/* Title */}
                       <motion.h4
-                        className="text-lg sm:text-xl lg:text-2xl font-bold text-text-primary mb-4 sm:mb-6 text-center group-hover:text-ochre transition-colors duration-300"
+                        className="text-lg sm:text-xl lg:text-2xl font-bold text-text-primary mb-4 sm:mb-6 text-center group-hover:text-[#8b9b78] transition-colors duration-300"
                         variants={textVariants}
                       >
                         {reason.title}
@@ -320,7 +319,7 @@ const AboutUsSection = () => {
             transition={{ duration: 0.2 }}
           >
             <Button
-              className="bg-gradient-to-r from-beige-dark to-ochre hover:from-ochre hover:to-beige-dark border-2 border-ochre hover:border-beige-dark text-black font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              className="bg-amber-800  hover:text-amber-300  hover:bg-amber-800  text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
               size="lg"
               asChild
             >

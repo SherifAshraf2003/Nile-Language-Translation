@@ -40,30 +40,6 @@ const DetailedServicesSection = () => {
     },
   ];
 
-  const specializedServices = [
-    {
-      icon: Heart,
-      title: "Medical Interpretation",
-      description:
-        "CCHI certified interpretation for hospitals, physical therapy, clinics, and social work.",
-      color: "text-red-600",
-    },
-    {
-      icon: Scale,
-      title: "Legal Interpretation",
-      description:
-        "Professional interpretation for law firms, immigration proceedings, and court settings.",
-      color: "text-blue-600",
-    },
-    {
-      icon: Building2,
-      title: "Business & Community",
-      description:
-        "Interpretation for conferences, job trainings, health fairs, and corporate meetings.",
-      color: "text-green-600",
-    },
-  ];
-
   return (
     <section className="py-12 sm:py-16 lg:py-20 bg-beige-dark">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,40 +96,6 @@ const DetailedServicesSection = () => {
               </Card>
             );
           })}
-        </div>
-
-        {/* Specialized Services */}
-        <div className="bg-beige rounded-2xl sm:rounded-3xl p-6 sm:p-8 mb-8 sm:mb-12">
-          <div className="text-center mb-8 sm:mb-12">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-3 sm:mb-4">
-              Specialized Interpretation Areas
-            </h3>
-            <p className="text-sm sm:text-base lg:text-lg text-text-secondary">
-              Expert interpretation services for specific industries and
-              contexts.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {specializedServices.map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-background rounded-2xl mb-3 sm:mb-4 mx-auto shadow-soft">
-                    <IconComponent
-                      className={`h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 ${service.color}`}
-                    />
-                  </div>
-                  <h4 className="text-base sm:text-lg lg:text-xl font-semibold text-text-primary mb-2 sm:mb-3">
-                    {service.title}
-                  </h4>
-                  <p className="text-xs sm:text-sm lg:text-base text-text-secondary leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
         </div>
 
         {/* Language Availability */}

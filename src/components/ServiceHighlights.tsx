@@ -204,16 +204,16 @@ const ServiceHighlights = () => {
                 }}
                 className="group"
               >
-                <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-beige-dark backdrop-blur-sm overflow-hidden relative">
+                <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500  bg-beige-dark backdrop-blur-sm overflow-hidden relative border-2 border-amber-500">
                   {/* Gradient overlay on hover */}
                   <div
-                    className={`absolute inset-0 bg-[#ae9d81] opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                    className={`absolute inset-0  opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                   />
 
                   <CardContent className="p-8 sm:p-10 lg:p-12 relative z-10">
                     {/* Icon Container */}
                     <motion.div
-                      className={`flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-[#EFE8DE] rounded-3xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110`}
+                      className={`flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-[#e3d7c6] rounded-3xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110`}
                       variants={iconVariants}
                       whileHover={{
                         rotate: [0, -10, 10, 0],
@@ -298,14 +298,14 @@ const ServiceHighlights = () => {
                   }}
                 >
                   <motion.div
-                    className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-white rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-ochre/10 group-hover:to-transparent"
+                    className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-amber-800  rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:bg-gradient-to-br group-hover:from-ochre/10 group-hover:to-transparent"
                     whileHover={{
                       rotate: 360,
                       transition: { duration: 0.6 },
                     }}
                   >
                     <IconComponent
-                      className={`h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 ${industry.color} group-hover:scale-110 transition-transform duration-300`}
+                      className={`h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-white group-hover:scale-110 transition-transform duration-300`}
                     />
                   </motion.div>
                   <span className="text-sm sm:text-base lg:text-lg font-semibold text-text-primary group-hover:text-ochre transition-colors duration-300">

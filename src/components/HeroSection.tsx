@@ -201,7 +201,7 @@ const HeroSection = () => {
               variant="hero"
               size="lg"
               asChild
-              className="text-base text-white sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500  shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="text-lg text-white sm:text-2xl px-8 sm:px-10 py-4 sm:py-6 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500  shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               <Link href="/contact">Get a Quote</Link>
             </Button>
@@ -216,7 +216,7 @@ const HeroSection = () => {
               variant="hero"
               size="lg"
               asChild
-              className="text-base text-white sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500  shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="text-lg text-white sm:text-2xl px-8 sm:px-10 py-4 sm:py-6 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500  shadow-xl hover:shadow-2xl transition-all duration-300"
             >
               <Link href="/contact">Contact Us</Link>
             </Button>
