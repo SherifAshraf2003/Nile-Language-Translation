@@ -204,7 +204,7 @@ const ServiceHighlights = () => {
                 }}
                 className="group"
               >
-                <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-[#BFC8B5] backdrop-blur-sm overflow-hidden relative">
+                <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-beige-dark backdrop-blur-sm overflow-hidden relative">
                   {/* Gradient overlay on hover */}
                   <div
                     className={`absolute inset-0 bg-[#ae9d81] opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
