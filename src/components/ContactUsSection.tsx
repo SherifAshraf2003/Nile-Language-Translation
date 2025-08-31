@@ -140,11 +140,8 @@ const Contact = () => {
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
-                <div className="group">
-                  <Card
-                    key={index}
-                    className="h-full shadow-2xl hover:shadow-3xl transition-all duration-500 bg-beige-dark backdrop-blur-sm overflow-hidden relative border-2 border-amber-500 text-center"
-                  >
+                <div key={index} className="group">
+                  <Card className="h-full shadow-2xl hover:shadow-3xl transition-all duration-500 bg-beige-dark backdrop-blur-sm overflow-hidden relative border-2 border-amber-500 text-center">
                     {/* Gradient overlay on hover */}
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
 

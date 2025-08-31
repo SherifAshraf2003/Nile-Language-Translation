@@ -15,7 +15,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import Link from "next/link";
-import { motion, easeOut, easeInOut } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 
 const ServicesPage = () => {
   const detailedServices = [
@@ -227,7 +227,7 @@ const ServicesPage = () => {
                       {/* Features */}
                       <div className="mb-8">
                         <h3 className="text-xl sm:text-2xl font-semibold text-text-primary mb-4">
-                          What's Included:
+                          What&apos;s Included:
                         </h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                           {service.features.map((feature, featureIndex) => (
@@ -396,7 +396,7 @@ const ServicesPage = () => {
             </h2>
             <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto">
               Contact us today to discuss your interpretation and translation
-              needs. We'll provide a customized solution that meets your
+              needs. We&apos;ll provide a customized solution that meets your
               requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

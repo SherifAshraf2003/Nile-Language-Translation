@@ -1,15 +1,7 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import {
-  CheckCircle,
-  Users,
-  Globe,
-  Award,
-  Star,
-  Heart,
-  Shield,
-} from "lucide-react";
+import { CheckCircle, Users, Globe, Award } from "lucide-react";
 import Link from "next/link";
 import { motion, easeOut, easeInOut } from "framer-motion";
 
