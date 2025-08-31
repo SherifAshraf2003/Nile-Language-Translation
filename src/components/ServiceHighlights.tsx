@@ -204,7 +204,7 @@ const ServiceHighlights = () => {
                 }}
                 className="group"
               >
-                <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-[#C3D1E6] backdrop-blur-sm overflow-hidden relative">
+                <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-[#BFC8B5] backdrop-blur-sm overflow-hidden relative">
                   {/* Gradient overlay on hover */}
                   <div
                     className={`absolute inset-0 bg-[#ae9d81] opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
@@ -225,7 +225,7 @@ const ServiceHighlights = () => {
 
                     {/* Title */}
                     <motion.h3
-                      className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-4 sm:mb-6 text-center group-hover:text-ochre transition-colors duration-300"
+                      className="text-xl sm:text-2xl lg:text-3xl font-bold text-text-primary mb-4 sm:mb-6 text-center  group-hover:text-ochre transition-colors duration-300"
                       variants={titleVariants}
                     >
                       {service.title}
