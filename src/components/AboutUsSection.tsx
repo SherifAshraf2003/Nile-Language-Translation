@@ -101,97 +101,6 @@ const AboutUsSection = () => {
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-beige-light via-beige-dark to-beige-light relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large floating orbs */}
-        <motion.div
-          className="absolute top-10 left-10 w-96 h-96 bg-gradient-to-br from-amber-800/15 via-ochre/10 to-amber-800/60 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.4, 1],
-            rotate: [0, 180, 360],
-            x: [0, -30, 0],
-            y: [0, 25, 0],
-          }}
-          transition={{
-            duration: 28,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-10 right-10 w-80 h-80 bg-gradient-to-tl from-ochre/12 via-amber-800/8 to-amber-800/60 rounded-full blur-3xl"
-          animate={{
-            scale: [1.3, 1, 1.3],
-            rotate: [360, 180, 0],
-            x: [0, 25, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 32,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-
-        {/* Medium floating orbs */}
-        <motion.div
-          className="absolute top-1/2 left-1/4 w-64 h-64 bg-gradient-to-br from-ochre/10 to-amber-800/50 rounded-full blur-2xl"
-          animate={{
-            scale: [1, 1.5, 1],
-            rotate: [0, 90, 180, 270, 360],
-            y: [0, -15, 0],
-          }}
-          transition={{
-            duration: 22,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/3 right-1/4 w-56 h-56 bg-gradient-to-tl from-amber-800/8 to-ochre/60 rounded-full blur-2xl"
-          animate={{
-            scale: [1.4, 1, 1.4],
-            rotate: [360, 270, 180, 90, 0],
-            x: [0, -20, 0],
-          }}
-          transition={{
-            duration: 19,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-
-        {/* Small floating particles */}
-        <motion.div
-          className="absolute top-1/3 right-1/3 w-32 h-32 bg-gradient-to-br from-ochre/6 to-amber-800/40 rounded-full blur-xl"
-          animate={{
-            scale: [1, 1.6, 1],
-            rotate: [0, 360],
-            x: [0, 35, 0],
-            y: [0, -25, 0],
-          }}
-          transition={{
-            duration: 16,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 left-1/2 w-24 h-24 bg-gradient-to-tr from-amber-800/5 to-ochre/40 rounded-full blur-lg"
-          animate={{
-            scale: [1.3, 1, 1.3],
-            rotate: [360, 0],
-            x: [0, -30, 0],
-            y: [0, 18, 0],
-          }}
-          transition={{
-            duration: 14,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-      </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* About Us Header */}
         <motion.div
@@ -274,11 +183,11 @@ const AboutUsSection = () => {
             className="group"
           >
             <motion.div
-              className="bg-gradient-to-br from-amber-800 via-amber-700 to-ochre text-text-inverse rounded-3xl sm:rounded-4xl p-8 sm:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 relative overflow-hidden"
+              className=" bg-amber-800  text-text-inverse rounded-3xl sm:rounded-4xl p-8 sm:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 relative overflow-hidden"
               whileHover={{ scale: 1.02 }}
             >
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-br from-ochre/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
               <div className="relative z-10">
                 <motion.h3
@@ -355,23 +264,23 @@ const AboutUsSection = () => {
                   }}
                   className="group"
                 >
-                  <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm overflow-hidden relative">
+                  <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-[#CFE6EC] backdrop-blur-sm overflow-hidden relative">
                     {/* Gradient overlay on hover */}
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${reason.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                      className={`absolute inset-0 bg-[#EFE8DE] opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                     />
 
                     <CardContent className="p-8 sm:p-10 relative z-10">
                       {/* Icon Container */}
                       <motion.div
-                        className={`flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gradient-to-br ${reason.gradient} rounded-2xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110`}
+                        className={`flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-[#EFE8DE] rounded-2xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110`}
                         variants={iconVariants}
                         whileHover={{
                           rotate: [0, -10, 10, 0],
                           transition: { duration: 0.6 },
                         }}
                       >
-                        <IconComponent className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-white" />
+                        <IconComponent className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-black" />
                       </motion.div>
 
                       {/* Title */}

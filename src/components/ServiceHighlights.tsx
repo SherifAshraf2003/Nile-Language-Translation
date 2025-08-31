@@ -153,97 +153,6 @@ const ServiceHighlights = () => {
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-beige-dark via-beige-light to-beige-dark relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Large floating orbs */}
-        <motion.div
-          className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-ochre/20 via-ochre/10 to-amber-800 rounded-full blur-3xl"
-          animate={{
-            scale: [1, 1.3, 1],
-            rotate: [0, 180, 360],
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-tr from-ochre/15 via-ochre/8 to-amber-800 rounded-full blur-3xl"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            rotate: [360, 180, 0],
-            x: [0, -25, 0],
-            y: [0, 15, 0],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-
-        {/* Medium floating orbs */}
-        <motion.div
-          className="absolute top-1/3 left-10 w-64 h-64 bg-gradient-to-br from-ochre/12 to-amber-800 rounded-full blur-2xl"
-          animate={{
-            scale: [1, 1.4, 1],
-            rotate: [0, 90, 180, 270, 360],
-            x: [0, 20, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/3 right-10 w-56 h-56 bg-gradient-to-tl from-ochre/10 to-amber-800 rounded-full blur-2xl"
-          animate={{
-            scale: [1.3, 1, 1.3],
-            rotate: [360, 270, 180, 90, 0],
-            y: [0, -15, 0],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-
-        {/* Small floating particles */}
-        <motion.div
-          className="absolute top-1/4 right-1/4 w-32 h-32 bg-gradient-to-br from-ochre/8 to-amber-800 rounded-full blur-xl"
-          animate={{
-            scale: [1, 1.5, 1],
-            rotate: [0, 360],
-            x: [0, 40, 0],
-            y: [0, -30, 0],
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-tr from-ochre/6 to-amber-800 rounded-full blur-lg"
-          animate={{
-            scale: [1.2, 1, 1.2],
-            rotate: [360, 0],
-            x: [0, -25, 0],
-            y: [0, 20, 0],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "linear",
-          }}
-        />
-      </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header Section */}
         <motion.div
@@ -298,20 +207,20 @@ const ServiceHighlights = () => {
                 <Card className="h-full shadow-xl hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm overflow-hidden relative">
                   {/* Gradient overlay on hover */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                    className={`absolute inset-0 bg-[#ae9d81] opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                   />
 
                   <CardContent className="p-8 sm:p-10 lg:p-12 relative z-10">
                     {/* Icon Container */}
                     <motion.div
-                      className={`flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-gradient-to-br ${service.gradient} rounded-3xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110`}
+                      className={`flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-[#EFE8DE] rounded-3xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110`}
                       variants={iconVariants}
                       whileHover={{
                         rotate: [0, -10, 10, 0],
                         transition: { duration: 0.6 },
                       }}
                     >
-                      <IconComponent className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-white" />
+                      <IconComponent className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-black" />
                     </motion.div>
 
                     {/* Title */}
