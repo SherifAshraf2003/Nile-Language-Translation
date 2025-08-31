@@ -210,7 +210,7 @@ const ServiceHighlights = () => {
                     className={`absolute inset-0  opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                   />
 
-                  <CardContent className="p-8 sm:p-10 lg:p-12 relative z-10">
+                  <CardContent className="p-8 sm:p-10 lg:p-12 relative z-10 flex flex-col justify-between h-full">
                     {/* Icon Container */}
                     <motion.div
                       className={`flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 bg-[#e3d7c6] rounded-3xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-2xl transition-all duration-500 group-hover:scale-110`}

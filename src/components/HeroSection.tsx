@@ -237,7 +237,7 @@ const HeroSection = () => {
             At Nile Language Services, we believe language should never be a
             barrier to communication. Based in Indiana, we provide onsite
             interpretation for hospitals, businesses, schools, law firms, and
-            community events—while offering virtual interpretation worldwide.
+            community events - while offering virtual interpretation worldwide.
           </motion.p>
         </motion.div>
       </motion.div>

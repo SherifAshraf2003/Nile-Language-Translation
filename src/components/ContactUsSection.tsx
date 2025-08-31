@@ -68,9 +68,11 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
-      title: "Email",
+      title: "Email & Phone",
       content: "info@nlsindy.com",
-      description: "Send us an email anytime",
+      phone1: "+1 (765) 586-4317",
+      phone2: "+1 (765) 532-4052",
+      description: "Send us an email or call anytime",
     },
     {
       icon: MapPin,
@@ -81,7 +83,7 @@ const Contact = () => {
     {
       icon: Clock,
       title: "Response Time",
-      content: "Within 24 hours",
+      content: "Within a couple hours",
       description: "Quick and reliable communication",
     },
   ];
@@ -89,16 +91,46 @@ const Contact = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-sand">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4 sm:mb-6">
-            Let&apos;s Connect!
-          </h1>
-          <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-            Ready to book an interpreter or have questions about our services?
-            We&apos;re here to help you communicate clearly and professionally.
-          </p>
+      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden bg-gradient-to-br from-beige-dark via-beige-light to-beige-dark">
+        <div className="absolute inset-0 bg-gradient-to-r from-ochre/10 via-transparent to-sand/10"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-text-primary via-ochre to-text-primary bg-clip-text text-transparent leading-tight">
+              Ready to Connect?
+            </h1>
+            <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 px-4">
+              Have questions about our interpretation services or ready to book
+              an interpreter? We&apos;re here to help you communicate clearly
+              and professionally across all languages.
+            </p>
+
+            {/* Contact Options */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-10">
+              <div className="flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300">
+                <Mail className="h-5 w-5 text-ochre mr-3" />
+                <span className="text-text-primary font-medium">
+                  Email: info@nlsindy.com
+                </span>
+              </div>
+              <div className="flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300">
+                <Phone className="h-5 w-5 text-ochre mr-3" />
+                <span className="text-text-primary font-medium">
+                  Call: +1 (765) 586-4317
+                </span>
+              </div>
+            </div>
+
+            {/* Decorative Elements */}
+            <div className="flex justify-center space-x-4 opacity-20">
+              <div className="w-16 h-16 rounded-full bg-ochre/30"></div>
+              <div className="w-12 h-12 rounded-full bg-sand/30 mt-4"></div>
+              <div className="w-20 h-20 rounded-full bg-ochre/20"></div>
+            </div>
+          </div>
         </div>
+
+        {/* Background Pattern */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
       </section>
 
       {/* Contact Information */}
@@ -108,22 +140,40 @@ const Contact = () => {
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon;
               return (
-                <Card key={index} className="shadow-card border-0 text-center">
-                  <CardContent className="p-6 sm:p-8">
-                    <div className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gradient-hero rounded-2xl mb-3 sm:mb-4 mx-auto">
-                      <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 lg:h-10 lg:w-10 text-foreground" />
-                    </div>
-                    <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-2">
-                      {info.title}
-                    </h3>
-                    <p className="text-ochre font-medium mb-1 text-sm sm:text-base">
-                      {info.content}
-                    </p>
-                    <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
-                      {info.description}
-                    </p>
-                  </CardContent>
-                </Card>
+                <div className="group">
+                  <Card
+                    key={index}
+                    className="h-full shadow-2xl hover:shadow-3xl transition-all duration-500 bg-beige-dark backdrop-blur-sm overflow-hidden relative border-2 border-amber-500 text-center"
+                  >
+                    {/* Gradient overlay on hover */}
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
+
+                    <CardContent className="p-8 sm:p-10 relative z-10">
+                      <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-[#e3d7c6] rounded-2xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110">
+                        <IconComponent className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-black" />
+                      </div>
+                      <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-2">
+                        {info.title}
+                      </h3>
+                      <p className="text-ochre font-medium mb-1 text-sm sm:text-base">
+                        {info.content}
+                      </p>
+                      {info.phone1 && (
+                        <>
+                          <p className="text-ochre font-medium mb-1 text-sm sm:text-base">
+                            {info.phone1}
+                          </p>
+                          <p className="text-ochre font-medium mb-1 text-sm sm:text-base">
+                            {info.phone2}
+                          </p>
+                        </>
+                      )}
+                      <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
+                        {info.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
               );
             })}
           </div>
@@ -155,7 +205,7 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* Contact Form */}
               <div className="lg:col-span-2">
-                <Card className="shadow-card border-0">
+                <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 bg-beige-dark backdrop-blur-sm overflow-hidden relative border-2 border-amber-500">
                   <CardHeader>
                     <CardTitle className="text-xl sm:text-2xl lg:text-3xl text-foreground flex items-center">
                       <MessageCircle className="h-5 w-5 sm:h-6 sm:w-6 mr-2 text-ochre" />
@@ -352,7 +402,7 @@ const Contact = () => {
 
               {/* Quick Contact */}
               <div className="space-y-4 sm:space-y-6">
-                <Card className="shadow-card border-0 bg-ochre text-background">
+                <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 bg-ochre text-background overflow-hidden relative border-2 border-amber-500">
                   <CardContent className="p-4 sm:p-6">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">
                       Need Immediate Assistance?
@@ -384,7 +434,7 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-card border-0">
+                <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 bg-beige-dark backdrop-blur-sm overflow-hidden relative border-2 border-amber-500">
                   <CardContent className="p-4 sm:p-6">
                     <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-3 sm:mb-4">
                       What Happens Next?

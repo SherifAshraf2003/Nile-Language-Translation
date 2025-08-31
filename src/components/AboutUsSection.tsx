@@ -313,19 +313,35 @@ const AboutUsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            transition={{ duration: 0.2 }}
-          >
-            <Button
-              className="bg-amber-800  hover:text-amber-300  hover:bg-amber-800  text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
-              size="lg"
-              asChild
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
             >
-              <Link href="/about">Learn More About Us</Link>
-            </Button>
-          </motion.div>
+              <Button
+                className="bg-amber-800  hover:text-amber-300  hover:bg-amber-800  text-white font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                size="lg"
+                asChild
+              >
+                <Link href="/about">Learn More About Us</Link>
+              </Button>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+            >
+              <Button
+                className="bg-amber-800  hover:text-amber-300  hover:bg-amber-800  text-white font-semibold shadow-xl hover:shadow-2xl min-w-[200px] transition-all duration-300 transform hover:scale-105"
+                size="lg"
+                asChild
+              >
+                <Link href="/about">Get A Quote</Link>
+              </Button>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </section>
