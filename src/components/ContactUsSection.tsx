@@ -134,7 +134,7 @@ const Contact = () => {
               >
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <Image
-                    src="/join-our-team-1.jpg"
+                    src="/join-our-team.jpg"
                     alt="Join our interpretation team"
                     width={600}
                     height={400}
