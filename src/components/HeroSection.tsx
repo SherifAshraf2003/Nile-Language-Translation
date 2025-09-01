@@ -100,7 +100,7 @@ const HeroSection = () => {
             playsInline
             preload="auto"
           >
-            <source src="/hero.mp4" type="video/mp4" />
+            <source src="/Hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </motion.div>
