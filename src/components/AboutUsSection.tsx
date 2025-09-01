@@ -14,6 +14,14 @@ import { motion, easeOut, easeInOut } from "framer-motion";
 const AboutUsSection = () => {
   const reasons = [
     {
+      icon: CircleDollarSign,
+      title: "Cost-Effectiveness",
+      description:
+        "Competitive, transparent pricing without hidden fees helps clients feel secure about their investment.",
+      gradient: "from-red-500 to-pink-500",
+      delay: 0.4,
+    },
+    {
       icon: Award,
       title: "Experienced & Professional",
       description:
@@ -36,14 +44,6 @@ const AboutUsSection = () => {
         "From hospitals to schools, law firms to conferences, we've built lasting relationships.",
       gradient: "from-green-500 to-emerald-500",
       delay: 0.3,
-    },
-    {
-      icon: CircleDollarSign,
-      title: "Cost-Effectiveness",
-      description:
-        "Competitive, transparent pricing without hidden fees helps clients feel secure about their investment.",
-      gradient: "from-red-500 to-pink-500",
-      delay: 0.4,
     },
   ];
 
@@ -226,7 +226,7 @@ const AboutUsSection = () => {
                 >
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6" />
                   <span className="text-sm sm:text-base font-semibold">
-                    Professional • Reliable • passionate
+                    Professional • Reliable • Compassionate
                   </span>
                 </motion.div>
               </div>

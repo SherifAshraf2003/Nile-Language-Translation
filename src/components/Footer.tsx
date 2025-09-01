@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-ochre text-background py-8 sm:py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-ochre-light/50  py-8 sm:py-12">
+      <div className="container mx-auto text-black px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div className="sm:col-span-2">
@@ -14,7 +14,7 @@ const Footer = () => {
                 Nile Language Services
               </span>
             </div>
-            <p className="text-sm sm:text-base text-background/90 mb-4 sm:mb-6 max-w-md">
+            <p className="text-sm sm:text-base  mb-4 sm:mb-6 max-w-md">
               As the Nile connects lands, we connect voices. Professional
               interpretation services bridging communication gaps across
               communities and industries.
@@ -40,7 +40,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/about"
-                  className="text-background/80 hover:text-background transition-colors"
+                  className=" hover:text-background transition-colors"
                 >
                   About Us
                 </Link>
@@ -48,7 +48,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/services"
-                  className="text-background/80 hover:text-background transition-colors"
+                  className=" hover:text-background transition-colors"
                 >
                   Services
                 </Link>
@@ -56,7 +56,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/join-team"
-                  className="text-background/80 hover:text-background transition-colors"
+                  className=" hover:text-background transition-colors"
                 >
                   Join Our Team
                 </Link>
@@ -64,7 +64,7 @@ const Footer = () => {
               <li>
                 <Link
                   href="/contact"
-                  className="text-background/80 hover:text-background transition-colors"
+                  className=" hover:text-background transition-colors"
                 >
                   Contact
                 </Link>
@@ -77,7 +77,7 @@ const Footer = () => {
             <h3 className="text-sm sm:text-base font-semibold mb-3 sm:mb-4">
               Services
             </h3>
-            <ul className="space-y-2 text-xs sm:text-sm text-background/80">
+            <ul className="space-y-2 text-xs sm:text-sm ">
               <li>Onsite Interpretation</li>
               <li>Virtual Interpretation</li>
               <li>Medical Interpretation</li>
@@ -87,7 +87,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-background/70">
+        <div className="border-t border-background/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm ">
           <p>&copy; 2024 Nile Language Services. All rights reserved.</p>
         </div>
       </div>

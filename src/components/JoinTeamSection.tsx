@@ -97,13 +97,29 @@ const JoinTeam = () => {
       {/* What We're Looking For */}
       <section className="py-12 sm:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-12 sm:mb-16 space-y-4">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-4 sm:mb-6">
               What We&apos;re Looking For
             </h2>
             <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
               We&apos;re seeking interpreters with experience in medical, legal,
               business, and community interpretation.
+            </p>
+
+            <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+              At Nile Language Services, we&apos;re building a growing network
+              of professionals dedicated to breaking barriers and connecting
+              voices across cultures.
+            </p>
+
+            <p className="text-sm sm:text-base lg:text-lg xl:text-xl text-muted-foreground max-w-2xl mx-auto px-4">
+              When you join us, you become part of a supportive community that
+              values professional growth, cultural understanding, and excellence
+              in communication. We provide opportunities across a variety of
+              settings—medical, legal, business, and community interpretation—so
+              you can put your skills to work where they matter most. Join us
+              today and help bridge the gap between languages, one conversation
+              at a time.
             </p>
           </div>
 

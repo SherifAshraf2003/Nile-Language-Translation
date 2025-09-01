@@ -48,7 +48,12 @@ const Navigation = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="cta" size="sm" asChild>
+            <Button
+              variant="cta"
+              size="sm"
+              asChild
+              className="bg-amber-800 text-white   "
+            >
               <Link href="/contact">Get a Quote</Link>
             </Button>
           </div>

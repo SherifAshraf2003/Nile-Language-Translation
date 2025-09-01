@@ -16,6 +16,8 @@ import {
 import { useToast } from "@/app/hooks/use-toast";
 import { Mail, MapPin, Clock, MessageCircle, Phone } from "lucide-react";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -94,35 +96,58 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden bg-gradient-to-br from-beige-dark via-beige-light to-beige-dark">
         <div className="absolute inset-0 bg-gradient-to-r from-ochre/10 via-transparent to-sand/10"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 text-text-primary leading-tight">
-              Want to Join Our Team?
-            </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 px-4">
-              Are you a qualified interpreter looking to join our professional
-              team? We&apos;re always seeking talented individuals who are
-              passionate about helping people communicate across language
-              barriers.
-            </p>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 text-text-primary leading-tight">
+                Want to Join Our Team?
+              </h1>
+              <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed mb-8 sm:mb-10 px-4 lg:px-0">
+                Are you a qualified or certified interpreter looking to join our
+                professional team? We&apos;re always seeking talented
+                individuals who are passionate about helping people communicate
+                across language barriers.
+              </p>
 
-            {/* Join Team Button */}
-            <div className="flex justify-center items-center mb-8 sm:mb-10">
-              <Button
-                variant="hero"
-                size="lg"
-                asChild
-                className="text-lg text-white sm:text-2xl px-8 sm:px-10 py-4 sm:py-6 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500 shadow-xl hover:shadow-2xl transition-all duration-300"
-              >
-                <Link href="/join-team">Join Our Team</Link>
-              </Button>
+              {/* Join Team Button */}
+              <div className="flex justify-center lg:justify-start items-center mb-8 sm:mb-10">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  asChild
+                  className="text-lg text-white sm:text-2xl px-8 sm:px-10 py-4 sm:py-6 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500 shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  <Link href="/join-team">Join Our Team</Link>
+                </Button>
+              </div>
             </div>
 
-            {/* Decorative Elements */}
-            <div className="flex justify-center space-x-4 opacity-20">
-              <div className="w-16 h-16 rounded-full bg-ochre/30"></div>
-              <div className="w-12 h-12 rounded-full bg-sand/30 mt-4"></div>
-              <div className="w-20 h-20 rounded-full bg-ochre/20"></div>
+            {/* Image */}
+            <div className="relative">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="relative z-10"
+              >
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <Image
+                    src="/want-to-join-us.jpg"
+                    alt="Join our interpretation team"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                </div>
+              </motion.div>
+
+              {/* Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-ochre/30 opacity-60"></div>
+              <div className="absolute -bottom-4 -left-4 w-12 h-12 rounded-full bg-sand/30 opacity-60"></div>
             </div>
           </div>
         </div>
@@ -136,16 +161,31 @@ const Contact = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground mb-3 sm:mb-4">
-                Do you have a Question ?
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-foreground   mb-3 sm:mb-4">
+                Do you have a <span className="text-amber-400">Question ?</span>
               </h2>
-              <h3 className=" text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-amber-400 font-bold mb-3 sm:mb-4">
+              <h3 className=" text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-foreground font-bold mb-3 sm:mb-4">
                 Contact Us
               </h3>
 
               <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-4">
-                If you need a Quote or want to contact us please send us a
-                message or call us.
+                If you need a{" "}
+                <motion.span
+                  className="text-amber-400 font-bold inline-block"
+                  animate={{
+                    y: [0, -15, 0],
+                    scale: [1, 1.1, 1],
+                  }}
+                  transition={{
+                    duration: 1.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    times: [0, 0.5, 1],
+                  }}
+                >
+                  Quote
+                </motion.span>{" "}
+                please send us a message or call us.
               </p>
               <p className="text-sm sm:text-base lg:text-lg text-muted-foreground">
                 Fill out the form below and we&apos;ll respond promptly with
@@ -368,12 +408,12 @@ const Contact = () => {
 
               {/* Quick Contact */}
               <div className="space-y-4 sm:space-y-6">
-                <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 bg-ochre text-background overflow-hidden relative border-2 border-amber-500">
-                  <CardContent className="p-4 sm:p-6">
+                <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 bg-ochre-light/50 text-background overflow-hidden relative border-2 border-amber-500">
+                  <CardContent className="p-4 sm:p-6 text-black ">
                     <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-3 sm:mb-4">
                       Need Immediate Assistance?
                     </h3>
-                    <p className="text-sm sm:text-base text-gray-100 mb-3 sm:mb-4">
+                    <p className="text-sm sm:text-base  mb-3 sm:mb-4">
                       For urgent interpretation needs or general questions,
                       reach out directly:
                     </p>
@@ -400,12 +440,12 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 bg-beige-dark backdrop-blur-sm overflow-hidden relative border-2 border-amber-500">
-                  <CardContent className="p-4 sm:p-6">
+                <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 bg-ochre-light/50 backdrop-blur-sm overflow-hidden relative border-2 border-amber-500">
+                  <CardContent className="p-4 sm:p-6  ">
                     <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-3 sm:mb-4">
                       What Happens Next?
                     </h3>
-                    <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-muted-foreground">
+                    <div className="space-y-2 sm:space-y-3 text-xs sm:text-sm text-black/80">
                       <div className="flex items-start">
                         <div className="w-5 h-5 sm:w-6 sm:h-6 bg-ochre text-background rounded-full flex items-center justify-center text-xs font-bold mr-2 sm:mr-3 mt-0.5">
                           1

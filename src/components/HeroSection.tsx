@@ -78,6 +78,72 @@ const HeroSection = () => {
     },
   };
 
+  const renderBrokenText = (text: string) => {
+    const brokenStyles = [
+      {
+        transform: "rotate(-3deg) translateY(-2px) skewX(-2deg)",
+        textShadow:
+          "2px 2px 0px rgba(0,0,0,0.8), 1px 1px 2px rgba(255,255,255,0.2)",
+      },
+      {
+        transform: "rotate(2deg) translateX(1px) translateY(1px) skewX(1deg)",
+        textShadow:
+          "2px 2px 0px rgba(0,0,0,0.8), -1px -1px 2px rgba(255,255,255,0.1)",
+      },
+      {
+        transform: "rotate(-1.5deg) translateY(2px) skewY(-1deg)",
+        textShadow:
+          "2px 2px 0px rgba(0,0,0,0.8), 1px -1px 2px rgba(255,255,255,0.15)",
+      },
+      {
+        transform:
+          "rotate(2.5deg) translateX(-1px) translateY(-1px) skewX(-1deg)",
+        textShadow:
+          "2px 2px 0px rgba(0,0,0,0.8), -1px 1px 2px rgba(255,255,255,0.1)",
+      },
+      {
+        transform: "rotate(-2deg) translateY(1px) translateX(1px) skewY(1deg)",
+        textShadow:
+          "2px 2px 0px rgba(0,0,0,0.8), 1px 1px 2px rgba(255,255,255,0.2)",
+      },
+      {
+        transform: "rotate(1.8deg) translateX(-1px) skewX(1.5deg)",
+        textShadow:
+          "2px 2px 0px rgba(0,0,0,0.8), -1px -1px 2px rgba(255,255,255,0.15)",
+      },
+      {
+        transform:
+          "rotate(-1deg) translateY(-1px) translateX(0.5px) skewY(-1.5deg)",
+        textShadow:
+          "2px 2px 0px rgba(0,0,0,0.8), 1px -1px 2px rgba(255,255,255,0.1)",
+      },
+      {
+        transform:
+          "rotate(2.2deg) translateX(0.5px) translateY(1px) skewX(-0.5deg)",
+        textShadow:
+          "2px 2px 0px rgba(0,0,0,0.8), -1px 1px 2px rgba(255,255,255,0.2)",
+      },
+    ];
+
+    return text.split("").map((letter, index) => (
+      <span
+        key={index}
+        style={{
+          fontFamily:
+            "var(--font-broken-glass), 'BrokenGlassFallback', 'Courier New', monospace",
+          fontSize: "1.2em",
+          fontWeight: "normal",
+          color: "white",
+          display: "inline-block",
+          position: "relative",
+          ...brokenStyles[index % brokenStyles.length],
+        }}
+      >
+        {letter === " " ? "\u00A0" : letter}
+      </span>
+    ));
+  };
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -175,7 +241,7 @@ const HeroSection = () => {
           variants={itemVariants}
         >
           An Indiana Agency<br></br>
-          Breaking Language Barriers
+          {renderBrokenText("Breaking")} Language Barriers
           <br></br>Through Interpretation
         </motion.h1>
 
@@ -183,7 +249,7 @@ const HeroSection = () => {
           className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-ochre mb-6 sm:mb-8 font-medium"
           variants={itemVariants}
         >
-          As the Nile connects lands, we connect people.
+          As the Nile connects lands, we connect voices.
         </motion.p>
 
         <motion.div
@@ -221,24 +287,6 @@ const HeroSection = () => {
               <Link href="/contact">Contact Us</Link>
             </Button>
           </motion.div>
-        </motion.div>
-
-        {/* Intro Paragraph */}
-        <motion.div
-          className="mt-8 sm:mt-12 max-w-3xl mx-auto"
-          variants={itemVariants}
-        >
-          <motion.p
-            className="text-background/90 text-sm sm:text-base lg:text-lg leading-relaxed px-4 bg-white/10 backdrop-blur-sm rounded-2xl py-6 border border-white/20"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
-          >
-            At Nile Language Services, we believe language should never be a
-            barrier to communication. Based in Indiana, we provide onsite
-            interpretation for hospitals, businesses, schools, law firms, and
-            community events - while offering virtual interpretation worldwide.
-          </motion.p>
         </motion.div>
       </motion.div>
     </section>
