@@ -22,21 +22,12 @@ const DetailedServicesSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <p className="text-lg sm:text-xl lg:text-2xl text-amber-800 mb-8 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-amber-800 mb-8 max-w-2xl mx-auto leading-relaxed">
             At Nile Language Services, we believe language should never be a
             barrier to communication. Based in Indiana, we provide onsite
             interpretation for hospitals, businesses, schools, law firms, and
             community events - while offering virtual interpretation worldwide.
           </p>
-
-          <Button
-            variant="cta"
-            size="lg"
-            asChild
-            className="text-white px-8 py-4 text-lg hover:scale-105 transition-transform duration-300"
-          >
-            <Link href="/services">Learn More About Our Services</Link>
-          </Button>
         </motion.div>
       </div>
     </section>

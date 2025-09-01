@@ -26,14 +26,13 @@ const ServicesPage = () => {
       description:
         "Professional in-person interpretation services for medical, legal, and business settings throughout Indiana.",
       features: [
-        "Certified medical interpretation (CMI)",
+        "Certified & qualified medical interpretation ",
         "Legal and court interpretation",
         "Business meetings and negotiations",
         "Educational conferences and workshops",
         "Community events and presentations",
         "Emergency and crisis situations",
       ],
-      pricing: "Starting at $75/hour",
       duration: "Minimum 2 hours",
       process: [
         "Initial consultation and assessment",
@@ -57,8 +56,7 @@ const ServicesPage = () => {
         "24/7 availability options",
         "Multi-language support",
       ],
-      pricing: "Starting at $65/hour",
-      duration: "Flexible scheduling",
+      duration: "Minimum 2 hours",
       process: [
         "Platform setup and testing",
         "Secure connection establishment",
@@ -81,7 +79,6 @@ const ServicesPage = () => {
         "Mobile and landline compatible",
         "Emergency response capable",
       ],
-      pricing: "Starting at $55/hour",
       duration: "Per minute billing available",
       process: [
         "Direct dial or operator-assisted",
@@ -105,11 +102,10 @@ const ServicesPage = () => {
         "Website and marketing materials",
         "Technical document translation",
       ],
-      pricing: "Starting at $0.15/word",
-      duration: "2-5 business days standard",
+      duration: "3-5 business days standard",
       process: [
         "Document assessment and quote",
-        "Translation by certified professionals",
+        "Translation by certified & qualified professionals",
         "Quality assurance and editing",
         "Formatting and layout preservation",
         "Client review and approval",
@@ -158,7 +154,7 @@ const ServicesPage = () => {
             transition={{ duration: 0.8 }}
           >
             <motion.h1
-              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-text-primary to-ochre bg-clip-text text-transparent"
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 text-[#8b9b78] "
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -190,11 +186,16 @@ const ServicesPage = () => {
           >
             {detailedServices.map((service, index) => {
               const IconComponent = service.icon;
+              const serviceId = service.title
+                .toLowerCase()
+                .replace(/\s+/g, "-")
+                .replace(/[^\w-]/g, "");
               return (
                 <motion.div
                   key={index}
                   variants={cardVariants}
                   className="group"
+                  id={serviceId}
                 >
                   <Card className="shadow-2xl hover:shadow-3xl transition-all duration-500 bg-beige-dark backdrop-blur-sm overflow-hidden relative border-2 border-amber-500">
                     <CardContent className="p-8 sm:p-10 lg:p-12">
@@ -245,28 +246,38 @@ const ServicesPage = () => {
                       </div>
 
                       {/* Pricing & Duration */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                        <div className="bg-ochre/10 p-4 rounded-xl">
-                          <div className="flex items-center mb-2">
-                            <Star className="h-5 w-5 text-ochre mr-2" />
-                            <span className="font-semibold text-text-primary">
-                              Pricing
-                            </span>
+                      <div className="max-w-4xl mx-auto">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                          <div className="bg-gradient-to-br from-ochre/15 to-ochre/5 p-6 rounded-2xl border border-ochre/20 shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div className="flex items-center justify-center text-center">
+                              <div className="flex flex-col items-center space-y-3">
+                                <div className="bg-ochre/20 p-3 rounded-full">
+                                  <Star className="h-6 w-6 text-ochre" />
+                                </div>
+                                <span className="text-lg font-bold text-text-primary">
+                                  Competitive Pricing
+                                </span>
+                                <p className="text-sm text-text-secondary text-center">
+                                  Quality service at fair rates
+                                </p>
+                              </div>
+                            </div>
                           </div>
-                          <p className="text-lg font-bold text-ochre">
-                            {service.pricing}
-                          </p>
-                        </div>
-                        <div className="bg-beige-light p-4 rounded-xl">
-                          <div className="flex items-center mb-2">
-                            <Clock className="h-5 w-5 text-text-primary mr-2" />
-                            <span className="font-semibold text-text-primary">
-                              Duration
-                            </span>
+                          <div className="bg-gradient-to-br from-beige-light/80 to-beige-light/40 p-6 rounded-2xl border border-beige-light/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                            <div className="flex items-center justify-center text-center">
+                              <div className="flex flex-col items-center space-y-3">
+                                <div className="bg-text-primary/10 p-3 rounded-full">
+                                  <Clock className="h-6 w-6 text-text-primary" />
+                                </div>
+                                <span className="text-lg font-bold text-text-primary">
+                                  Duration
+                                </span>
+                                <p className="text-base text-text-secondary font-medium">
+                                  {service.duration}
+                                </p>
+                              </div>
+                            </div>
                           </div>
-                          <p className="text-base text-text-secondary">
-                            {service.duration}
-                          </p>
                         </div>
                       </div>
 
@@ -335,9 +346,9 @@ const ServicesPage = () => {
             {[
               {
                 icon: Award,
-                title: "Certified Professionals",
+                title: "Certified & Qualified Professionals",
                 description:
-                  "All our interpreters are certified and experienced in their specialized fields.",
+                  "All our interpreters are certified, qualified and experienced in their specialized fields.",
               },
               {
                 icon: Shield,

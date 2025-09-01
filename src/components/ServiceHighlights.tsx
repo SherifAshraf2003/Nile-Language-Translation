@@ -23,6 +23,7 @@ const ServiceHighlights = () => {
         "Professional in-person interpretation services throughout Indiana for hospitals, businesses, schools, and legal settings.",
       gradient: "from-blue-500 to-cyan-500",
       delay: 0.1,
+      serviceId: "onsite-interpretation",
     },
     {
       icon: Globe,
@@ -31,6 +32,7 @@ const ServiceHighlights = () => {
         "NLS provides both scheduled and on-demand video interpretation services.",
       gradient: "from-purple-500 to-pink-500",
       delay: 0.2,
+      serviceId: "virtual-interpretation",
     },
     {
       icon: Pencil,
@@ -39,6 +41,7 @@ const ServiceHighlights = () => {
         "Document translation for legal documents, personal documents, posters, books, brochures and much more.",
       gradient: "from-green-500 to-emerald-500",
       delay: 0.3,
+      serviceId: "document-translation",
     },
     {
       icon: Phone,
@@ -47,6 +50,7 @@ const ServiceHighlights = () => {
         "NLS provides both scheduled and on-demand telephone interpretation services.",
       gradient: "from-orange-500 to-red-500",
       delay: 0.4,
+      serviceId: "phone-interpretation",
     },
   ];
 
@@ -245,7 +249,7 @@ const ServiceHighlights = () => {
                       variants={buttonVariants}
                     >
                       <Link
-                        href="/services"
+                        href={`/services#${service.serviceId}`}
                         className="inline-block bg-gradient-to-r from-ochre to-ochre/80 text-text-inverse px-6 py-3 rounded-full text-sm sm:text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 hover:bg-gradient-to-r hover:from-ochre/90 hover:to-ochre"
                       >
                         Learn More

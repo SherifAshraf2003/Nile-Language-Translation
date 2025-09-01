@@ -231,29 +231,29 @@ const HeroSection = () => {
 
       {/* Content */}
       <motion.div
-        className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+        className="relative z-10 text-center max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 xl:px-16 py-8 sm:py-12"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         <motion.h1
-          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 sm:mb-10 md:mb-12 leading-tight tracking-tight"
           variants={itemVariants}
         >
-          An Indiana Agency<br></br>
+          An Indiana Agency<br className="hidden sm:block"></br>
           {renderBrokenText("Breaking")} Language Barriers
-          <br></br>Through Interpretation
+          <br className="hidden sm:block"></br>Through Interpretation
         </motion.h1>
 
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-ochre mb-6 sm:mb-8 font-medium"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-ochre mb-10 sm:mb-12 md:mb-16 font-medium max-w-4xl mx-auto leading-relaxed"
           variants={itemVariants}
         >
           As the Nile connects lands, we connect voices.
         </motion.p>
 
         <motion.div
-          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12"
+          className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center mb-12 sm:mb-16 md:mb-20"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -267,7 +267,7 @@ const HeroSection = () => {
               variant="hero"
               size="lg"
               asChild
-              className="text-lg text-white sm:text-2xl px-8 sm:px-10 py-4 sm:py-6 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500  shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="text-lg text-white sm:text-xl md:text-2xl px-10 sm:px-12 md:px-16 py-5 sm:py-6 md:py-8 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg"
             >
               <Link href="/contact">Get a Quote</Link>
             </Button>
@@ -282,7 +282,7 @@ const HeroSection = () => {
               variant="hero"
               size="lg"
               asChild
-              className="text-lg text-white sm:text-2xl px-8 sm:px-10 py-4 sm:py-6 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500  shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="text-lg text-white sm:text-xl md:text-2xl px-10 sm:px-12 md:px-16 py-5 sm:py-6 md:py-8 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500 shadow-xl hover:shadow-2xl transition-all duration-300 rounded-lg"
             >
               <Link href="/contact">Contact Us</Link>
             </Button>

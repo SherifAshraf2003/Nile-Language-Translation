@@ -25,7 +25,7 @@ const AboutUsSection = () => {
       icon: Award,
       title: "Experienced & Professional",
       description:
-        "certified & qualified  medical intetpreters who can deliver precise, unbiased, and culturally appropriate communication.",
+        "Certified & qualified  medical intetpreters who can deliver precise, unbiased, and culturally appropriate communication.",
       gradient: "from-yellow-500 to-amber-500",
       delay: 0.1,
     },
@@ -39,9 +39,9 @@ const AboutUsSection = () => {
     },
     {
       icon: Users,
-      title: "Reputation & Trust",
+      title: "Confidential & Secure",
       description:
-        "From hospitals to schools, law firms to conferences, we've built lasting relationships.",
+        "All interpreters follow strict standards of confidentiality & ethics. HIPAA compliance for all your sensitive information.",
       gradient: "from-green-500 to-emerald-500",
       delay: 0.3,
     },

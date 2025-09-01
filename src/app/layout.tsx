@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${playfairDisplay.variable} ${brokenGlass.variable} antialiased`}
+        className={`${inter.variable} ${playfairDisplay.variable} ${brokenGlass.variable} antialiased scroll-smooth`}
       >
         <div className="min-h-screen flex flex-col">
           <Navigation />
