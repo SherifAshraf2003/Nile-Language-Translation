@@ -99,6 +99,7 @@ const HeroSection = () => {
             loop
             playsInline
             preload="auto"
+            poster="/hero.png"
           >
             <source src="/Hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
