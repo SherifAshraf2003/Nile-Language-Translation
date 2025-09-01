@@ -93,7 +93,7 @@ All colors MUST be HSL.
       hsl(var(--beige)) 0%,
       hsl(var(--sand)) 100%
     );
-    --gradient-overlay: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+    --gradient-overlay: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 
     /* Desert shadows */
     --shadow-soft: 0 4px 20px -4px hsl(var(--ochre) / 0.15);

@@ -104,10 +104,10 @@ const Contact = () => {
                 Want to Join Our Team?
               </h1>
               <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed mb-8 sm:mb-10 px-4 lg:px-0">
-                Are you a qualified or certified interpreter looking to join our
-                professional team? We&apos;re always seeking talented
-                individuals who are passionate about helping people communicate
-                across language barriers.
+                Are you a qualified or a certified interpreter or a translator
+                looking to join our professional team? We&apos;re always seeking
+                talented individuals who are passionate about helping people
+                communicate across language barriers.
               </p>
 
               {/* Join Team Button */}
