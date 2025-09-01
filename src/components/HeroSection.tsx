@@ -165,6 +165,7 @@ const HeroSection = () => {
             muted
             loop
             playsInline
+            preload="auto"
           >
             <source src="/Hero.mp4" type="video/mp4" />
           </Video>
