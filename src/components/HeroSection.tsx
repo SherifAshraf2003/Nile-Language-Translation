@@ -77,74 +77,8 @@ const HeroSection = () => {
     },
   };
 
-  const renderBrokenText = (text: string) => {
-    const brokenStyles = [
-      {
-        transform: "rotate(-3deg) translateY(-2px) skewX(-2deg)",
-        textShadow:
-          "2px 2px 0px rgba(0,0,0,0.8), 1px 1px 2px rgba(255,255,255,0.2)",
-      },
-      {
-        transform: "rotate(2deg) translateX(1px) translateY(1px) skewX(1deg)",
-        textShadow:
-          "2px 2px 0px rgba(0,0,0,0.8), -1px -1px 2px rgba(255,255,255,0.1)",
-      },
-      {
-        transform: "rotate(-1.5deg) translateY(2px) skewY(-1deg)",
-        textShadow:
-          "2px 2px 0px rgba(0,0,0,0.8), 1px -1px 2px rgba(255,255,255,0.15)",
-      },
-      {
-        transform:
-          "rotate(2.5deg) translateX(-1px) translateY(-1px) skewX(-1deg)",
-        textShadow:
-          "2px 2px 0px rgba(0,0,0,0.8), -1px 1px 2px rgba(255,255,255,0.1)",
-      },
-      {
-        transform: "rotate(-2deg) translateY(1px) translateX(1px) skewY(1deg)",
-        textShadow:
-          "2px 2px 0px rgba(0,0,0,0.8), 1px 1px 2px rgba(255,255,255,0.2)",
-      },
-      {
-        transform: "rotate(1.8deg) translateX(-1px) skewX(1.5deg)",
-        textShadow:
-          "2px 2px 0px rgba(0,0,0,0.8), -1px -1px 2px rgba(255,255,255,0.15)",
-      },
-      {
-        transform:
-          "rotate(-1deg) translateY(-1px) translateX(0.5px) skewY(-1.5deg)",
-        textShadow:
-          "2px 2px 0px rgba(0,0,0,0.8), 1px -1px 2px rgba(255,255,255,0.1)",
-      },
-      {
-        transform:
-          "rotate(2.2deg) translateX(0.5px) translateY(1px) skewX(-0.5deg)",
-        textShadow:
-          "2px 2px 0px rgba(0,0,0,0.8), -1px 1px 2px rgba(255,255,255,0.2)",
-      },
-    ];
-
-    return text.split("").map((letter, index) => (
-      <span
-        key={index}
-        style={{
-          fontFamily:
-            "var(--font-broken-glass), 'BrokenGlassFallback', 'Courier New', monospace",
-          fontSize: "1.2em",
-          fontWeight: "normal",
-          color: "white",
-          display: "inline-block",
-          position: "relative",
-          ...brokenStyles[index % brokenStyles.length],
-        }}
-      >
-        {letter === " " ? "\u00A0" : letter}
-      </span>
-    ));
-  };
-
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <motion.div
         className="absolute inset-0"
@@ -152,14 +86,13 @@ const HeroSection = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* Video Background with next-video optimization */}
         <motion.div
-          className="w-full h-full"
+          className="absolute inset-0 w-full h-full"
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: easeOut }}
         >
-          <Video
+          <video
             className="w-full h-full object-cover"
             autoPlay
             muted
@@ -167,8 +100,9 @@ const HeroSection = () => {
             playsInline
             preload="auto"
           >
-            <source src="/Hero.mp4" type="video/mp4" />
-          </Video>
+            <source src="/hero.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </motion.div>
         <motion.div
           className="absolute inset-0 bg-gradient-overlay"
@@ -250,9 +184,10 @@ const HeroSection = () => {
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-8 sm:mb-10 md:mb-12 leading-tight tracking-tight"
           variants={itemVariants}
         >
-          An Indiana Agency<br className="hidden sm:block"></br>
-          {renderBrokenText("Breaking")} Language Barriers
-          <br className="hidden sm:block"></br>Through Interpretation
+          An Indiana Agency <br />
+          Breaking Language Barriers
+          <br />
+          Through Interpretation
         </motion.h1>
 
         <motion.p
