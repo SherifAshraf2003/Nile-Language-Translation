@@ -1,9 +1,9 @@
-import ContactUsSection from "@/components/ContactUsSection";
+import ContactUsPage from "@/components/ContactUsPage";
 
 export default function ContactPage() {
   return (
     <main>
-      <ContactUsSection />
+      <ContactUsPage />
     </main>
   );
 }
