@@ -166,7 +166,7 @@ const HeroSection = () => {
             loop
             playsInline
           >
-            <source src="/hero.mp4" type="video/mp4" />
+            <source src="/Hero.mp4" type="video/mp4" />
           </Video>
         </motion.div>
         <motion.div
