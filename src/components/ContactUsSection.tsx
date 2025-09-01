@@ -132,7 +132,7 @@ const Contact = () => {
                 viewport={{ once: true }}
                 className="relative z-10"
               >
-                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <div className="relative overflow-hidden border-2 border-amber-500 rounded-2xl shadow-2xl">
                   <Image
                     src="/join-our-team.jpg"
                     alt="Join our interpretation team"

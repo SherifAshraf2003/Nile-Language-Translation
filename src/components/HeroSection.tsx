@@ -1,9 +1,8 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import heroImage from "../../public/nile-river.jpg";
 import Link from "next/link";
-import Image from "next/image";
 import { motion, easeOut } from "framer-motion";
+import Video from "next-video";
 
 const HeroSection = () => {
   const containerVariants = {
@@ -153,13 +152,23 @@ const HeroSection = () => {
         initial="hidden"
         animate="visible"
       >
-        <Image
-          src={heroImage}
-          alt="Nile River flowing peacefully"
-          className="w-full h-full object-cover"
-          fill
-          priority
-        />
+        {/* Video Background with next-video optimization */}
+        <motion.div
+          className="w-full h-full"
+          initial={{ scale: 1.1, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1.5, ease: easeOut }}
+        >
+          <Video
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/hero.mp4" type="video/mp4" />
+          </Video>
+        </motion.div>
         <motion.div
           className="absolute inset-0 bg-gradient-overlay"
           initial={{ opacity: 0 }}
