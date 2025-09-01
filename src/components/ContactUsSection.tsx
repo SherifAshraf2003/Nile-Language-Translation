@@ -93,6 +93,70 @@ const Contact = () => {
 
   return (
     <>
+      {/* Hero Section */}
+      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden bg-gradient-to-br from-beige-dark via-beige-light to-beige-dark">
+        <div className="absolute inset-0 bg-gradient-to-r from-ochre/10 via-transparent to-sand/10"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 text-text-primary leading-tight">
+                Want to Join Our Team?
+              </h1>
+              <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed mb-8 sm:mb-10 px-4 lg:px-0">
+                Are you a qualified or certified interpreter looking to join our
+                professional team? We&apos;re always seeking talented
+                individuals who are passionate about helping people communicate
+                across language barriers.
+              </p>
+
+              {/* Join Team Button */}
+              <div className="flex justify-center lg:justify-start items-center mb-8 sm:mb-10">
+                <Button
+                  variant="hero"
+                  size="lg"
+                  asChild
+                  className="text-lg text-white sm:text-2xl px-8 sm:px-10 py-4 sm:py-6 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500 shadow-xl hover:shadow-2xl transition-all duration-300"
+                >
+                  <Link href="/join-team">Join Our Team</Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="relative">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="relative z-10"
+              >
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                  <Image
+                    src="/join-our-team-1.jpg"
+                    alt="Join our interpretation team"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                </div>
+              </motion.div>
+
+              {/* Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-ochre/30 opacity-60"></div>
+              <div className="absolute -bottom-4 -left-4 w-12 h-12 rounded-full bg-sand/30 opacity-60"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Background Pattern */}
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
+      </section>
+
+      {/* Contact Form */}
       <section className="py-12 sm:py-16 lg:py-20 bg-beige-light">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
