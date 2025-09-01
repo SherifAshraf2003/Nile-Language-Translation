@@ -180,7 +180,7 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-sand-light mb-6 sm:mb-8 font-medium"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-ochre mb-6 sm:mb-8 font-medium"
           variants={itemVariants}
         >
           As the Nile connects lands, we connect people.

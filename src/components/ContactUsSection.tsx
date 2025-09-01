@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 import { useToast } from "@/app/hooks/use-toast";
 import { Mail, MapPin, Clock, MessageCircle, Phone } from "lucide-react";
+import Link from "next/link";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -95,29 +96,26 @@ const Contact = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-ochre/10 via-transparent to-sand/10"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 bg-gradient-to-r from-text-primary via-ochre to-text-primary bg-clip-text text-transparent leading-tight">
-              Ready to Connect?
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-8 text-text-primary leading-tight">
+              Want to Join Our Team?
             </h1>
             <p className="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10 px-4">
-              Have questions about our interpretation services or ready to book
-              an interpreter? We&apos;re here to help you communicate clearly
-              and professionally across all languages.
+              Are you a qualified interpreter looking to join our professional
+              team? We&apos;re always seeking talented individuals who are
+              passionate about helping people communicate across language
+              barriers.
             </p>
 
-            {/* Contact Options */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-8 sm:mb-10">
-              <div className="flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300">
-                <Mail className="h-5 w-5 text-ochre mr-3" />
-                <span className="text-text-primary font-medium">
-                  Email: info@nlsindy.com
-                </span>
-              </div>
-              <div className="flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300">
-                <Phone className="h-5 w-5 text-ochre mr-3" />
-                <span className="text-text-primary font-medium">
-                  Call: +1 (765) 586-4317
-                </span>
-              </div>
+            {/* Join Team Button */}
+            <div className="flex justify-center items-center mb-8 sm:mb-10">
+              <Button
+                variant="hero"
+                size="lg"
+                asChild
+                className="text-lg text-white sm:text-2xl px-8 sm:px-10 py-4 sm:py-6 bg-amber-800 hover:bg-amber-800/80 hover:text-amber-500 shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                <Link href="/join-team">Join Our Team</Link>
+              </Button>
             </div>
 
             {/* Decorative Elements */}
@@ -131,50 +129,6 @@ const Contact = () => {
 
         {/* Background Pattern */}
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
-      </section>
-
-      {/* Contact Information */}
-      <section className="py-12 sm:py-16 lg:py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
-            {contactInfo.map((info, index) => {
-              const IconComponent = info.icon;
-              return (
-                <div key={index} className="group">
-                  <Card className="h-full shadow-2xl hover:shadow-3xl transition-all duration-500 bg-beige-dark backdrop-blur-sm overflow-hidden relative border-2 border-amber-500 text-center">
-                    {/* Gradient overlay on hover */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500" />
-
-                    <CardContent className="p-8 sm:p-10 relative z-10">
-                      <div className="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-[#e3d7c6] rounded-2xl mb-6 sm:mb-8 mx-auto shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110">
-                        <IconComponent className="h-8 w-8 sm:h-10 sm:w-10 lg:h-12 lg:w-12 text-black" />
-                      </div>
-                      <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-foreground mb-2">
-                        {info.title}
-                      </h3>
-                      <p className="text-ochre font-medium mb-1 text-sm sm:text-base">
-                        {info.content}
-                      </p>
-                      {info.phone1 && (
-                        <>
-                          <p className="text-ochre font-medium mb-1 text-sm sm:text-base">
-                            {info.phone1}
-                          </p>
-                          <p className="text-ochre font-medium mb-1 text-sm sm:text-base">
-                            {info.phone2}
-                          </p>
-                        </>
-                      )}
-                      <p className="text-muted-foreground text-xs sm:text-sm lg:text-base">
-                        {info.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              );
-            })}
-          </div>
-        </div>
       </section>
 
       {/* Contact Form */}
@@ -229,7 +183,7 @@ const Contact = () => {
                             value={formData.fullName}
                             onChange={handleInputChange}
                             required
-                            className="mt-2"
+                            className="mt-2 border border-gray-600 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                           />
                         </div>
                         <div>
@@ -246,7 +200,7 @@ const Contact = () => {
                             value={formData.email}
                             onChange={handleInputChange}
                             required
-                            className="mt-2"
+                            className="mt-2 border border-gray-600 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                           />
                         </div>
                       </div>
@@ -266,7 +220,7 @@ const Contact = () => {
                             value={formData.phone}
                             onChange={handleInputChange}
                             required
-                            className="mt-2"
+                            className="mt-2 border border-gray-600 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                           />
                         </div>
                         <div>
@@ -282,7 +236,7 @@ const Contact = () => {
                             value={formData.organization}
                             onChange={handleInputChange}
                             placeholder="Hospital, law firm, business, etc."
-                            className="mt-2"
+                            className="mt-2 border border-gray-600 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                           />
                         </div>
                       </div>
@@ -296,7 +250,7 @@ const Contact = () => {
                           Type of Service Needed *
                         </Label>
                         <Select onValueChange={handleSelectChange} required>
-                          <SelectTrigger className="mt-2">
+                          <SelectTrigger className="mt-2 border border-gray-600 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20">
                             <SelectValue placeholder="Select service type" />
                           </SelectTrigger>
                           <SelectContent>
@@ -321,8 +275,23 @@ const Contact = () => {
                             <SelectItem value="virtual-business">
                               Virtual Business Interpretation
                             </SelectItem>
+                            <SelectItem value="virtual-education">
+                              Virtual Educational Interpretation
+                            </SelectItem>
                             <SelectItem value="virtual-conference">
                               Virtual Conference/Event
+                            </SelectItem>
+                            <SelectItem value="opi-medical">
+                              OPI Medical Interpretation
+                            </SelectItem>
+                            <SelectItem value="opi-legal">
+                              OPI Legal Interpretation
+                            </SelectItem>
+                            <SelectItem value="opi-business">
+                              OPI Business Interpretation
+                            </SelectItem>
+                            <SelectItem value="opi-education">
+                              OPI Educational Interpretation
                             </SelectItem>
                             <SelectItem value="other">
                               Other (Please specify in message)
@@ -345,7 +314,7 @@ const Contact = () => {
                             type="date"
                             value={formData.date}
                             onChange={handleInputChange}
-                            className="mt-2"
+                            className="mt-2 border border-gray-600 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                           />
                         </div>
                         <div>
@@ -361,7 +330,7 @@ const Contact = () => {
                             value={formData.location}
                             onChange={handleInputChange}
                             placeholder="Address or virtual platform"
-                            className="mt-2"
+                            className="mt-2 border border-gray-600 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                           />
                         </div>
                       </div>
@@ -379,7 +348,7 @@ const Contact = () => {
                           value={formData.message}
                           onChange={handleInputChange}
                           placeholder="Please provide any additional details about your interpretation needs, duration, special requirements, etc."
-                          className="mt-2"
+                          className="mt-2 border border-gray-600 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20"
                           rows={5}
                         />
                       </div>

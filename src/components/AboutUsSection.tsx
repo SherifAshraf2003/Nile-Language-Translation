@@ -1,7 +1,13 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Users, Globe, Award } from "lucide-react";
+import {
+  CheckCircle,
+  Users,
+  Globe,
+  Award,
+  CircleDollarSign,
+} from "lucide-react";
 import Link from "next/link";
 import { motion, easeOut, easeInOut } from "framer-motion";
 
@@ -9,8 +15,9 @@ const AboutUsSection = () => {
   const reasons = [
     {
       icon: Award,
-      title: "Experienced",
-      description: "Certified & qualified Spanish medical interpreters.",
+      title: "Experienced & Professional",
+      description:
+        "certified & qualified  medical intetpreters who can deliver precise, unbiased, and culturally appropriate communication.",
       gradient: "from-yellow-500 to-amber-500",
       delay: 0.1,
     },
@@ -18,17 +25,25 @@ const AboutUsSection = () => {
       icon: Globe,
       title: "Flexible Services",
       description:
-        "Onsite interpretation in Indiana & virtual interpretation worldwide.",
+        "On-demand, 24/7, whether in-person, over-the-phone, or video remote.",
       gradient: "from-blue-500 to-cyan-500",
       delay: 0.2,
     },
     {
       icon: Users,
-      title: "Trusted by Organizations",
+      title: "Reputation & Trust",
       description:
         "From hospitals to schools, law firms to conferences, we've built lasting relationships.",
       gradient: "from-green-500 to-emerald-500",
       delay: 0.3,
+    },
+    {
+      icon: CircleDollarSign,
+      title: "Cost-Effectiveness",
+      description:
+        "Competitive, transparent pricing without hidden fees helps clients feel secure about their investment.",
+      gradient: "from-red-500 to-pink-500",
+      delay: 0.4,
     },
   ];
 
@@ -211,7 +226,7 @@ const AboutUsSection = () => {
                 >
                   <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6" />
                   <span className="text-sm sm:text-base font-semibold">
-                    Professional • Reliable • Compassionate
+                    Professional • Reliable • passionate
                   </span>
                 </motion.div>
               </div>
@@ -237,7 +252,7 @@ const AboutUsSection = () => {
             Why Clients Choose NLS
           </motion.h3>
           <motion.div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
