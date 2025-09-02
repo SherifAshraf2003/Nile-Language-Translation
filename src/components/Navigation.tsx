@@ -14,6 +14,7 @@ const Navigation = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Services", path: "/services" },
+    { name: "Blogs", path: "/blogs" },
     { name: "Join Our Team", path: "/join-team" },
     { name: "Contact", path: "/contact" },
   ];
@@ -25,8 +26,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-3 sm:py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="h-6 w-6 sm:h-8 sm:w-8 bg-gradient-hero rounded-full"></div>
+          <Link href="/" className="flex items-center space-x-3">
+            <img
+              src="/logo.svg"
+              alt="Nile Language Services Logo"
+              className="h-8 w-auto sm:h-16"
+            />
             <span className="text-lg sm:text-xl font-bold text-foreground">
               Nile Language Services
             </span>

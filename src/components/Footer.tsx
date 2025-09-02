@@ -8,8 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {/* Company Info */}
           <div className="sm:col-span-2">
-            <div className="flex items-center space-x-2 mb-3 sm:mb-4">
-              <div className="h-6 w-6 sm:h-8 sm:w-8 bg-sand rounded-full"></div>
+            <div className="flex items-center space-x-3 mb-3 sm:mb-4">
+              <img
+                src="/logo.svg"
+                alt="Nile Language Services Logo"
+                className="h-8 w-auto sm:h-16"
+              />
               <span className="text-lg sm:text-xl font-bold">
                 Nile Language Services
               </span>
