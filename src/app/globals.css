@@ -393,6 +393,14 @@ All colors MUST be HSL.
   .font-playfair {
     font-family: var(--font-playfair), serif;
   }
+
+  /* White text outline utility */
+  .text-outline-white {
+    -webkit-text-stroke: 0.5px #ffffff;
+    text-shadow: 0.5px 0 0 #ffffff, -0.5px 0 0 #ffffff, 0 0.5px 0 #ffffff,
+      0 -0.5px 0 #ffffff, 0.5px 0.5px 0 #ffffff, -0.5px 0.5px 0 #ffffff,
+      0.5px -0.5px 0 #ffffff, -0.5px -0.5px 0 #ffffff;
+  }
 }
 
 @keyframes accordion-down {

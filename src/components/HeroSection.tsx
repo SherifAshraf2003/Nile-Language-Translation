@@ -192,7 +192,7 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-ochre mb-10 sm:mb-12 md:mb-16 font-medium max-w-4xl mx-auto leading-relaxed border-2 border-white rounded-xl "
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-ochre mb-10 sm:mb-12 md:mb-16 font-medium max-w-4xl mx-auto leading-relaxed text-outline-white"
           variants={itemVariants}
         >
           As the Nile connects lands, we connect voices.

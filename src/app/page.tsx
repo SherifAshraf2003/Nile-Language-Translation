@@ -3,6 +3,7 @@ import ContactUsSection from "../components/ContactUsSection";
 import DetailedServicesSection from "../components/DetailedServiceSection";
 import HeroSection from "../components/HeroSection";
 import ServiceHighlights from "../components/ServiceHighlights";
+import BlogSection from "../components/BlogSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
 
       {/* Detailed Services Section - Comprehensive service breakdown */}
       <DetailedServicesSection />
+
+      {/* Blog Section - Latest posts from Wisp */}
+      <BlogSection />
 
       {/* Contact Us Section - Contact information and form */}
       <ContactUsSection />
