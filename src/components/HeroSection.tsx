@@ -93,7 +93,7 @@ const HeroSection = () => {
           transition={{ duration: 1.5, ease: easeOut }}
         >
           <video
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-110"
             autoPlay
             muted
             loop
@@ -192,7 +192,7 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-ochre mb-10 sm:mb-12 md:mb-16 font-medium max-w-4xl mx-auto leading-relaxed"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-ochre mb-10 sm:mb-12 md:mb-16 font-medium max-w-4xl mx-auto leading-relaxed border-2 border-white rounded-xl "
           variants={itemVariants}
         >
           As the Nile connects lands, we connect voices.
