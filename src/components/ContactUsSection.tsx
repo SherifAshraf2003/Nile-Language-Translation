@@ -68,29 +68,6 @@ const Contact = () => {
     });
   };
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "Email & Phone",
-      content: "info@nlsindy.com",
-      phone1: "+1 (765) 586-4317",
-      phone2: "+1 (765) 532-4052",
-      description: "Send us an email or call anytime",
-    },
-    {
-      icon: MapPin,
-      title: "Service Area",
-      content: "Indiana (Onsite) • Worldwide (Virtual)",
-      description: "Flexible service options",
-    },
-    {
-      icon: Clock,
-      title: "Response Time",
-      content: "Within a couple hours",
-      description: "Quick and reliable communication",
-    },
-  ];
-
   return (
     <>
       {/* Hero Section */}

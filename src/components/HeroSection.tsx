@@ -92,7 +92,7 @@ const HeroSection = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: easeOut }}
         >
-          <video
+          <Video
             className="w-full h-full object-cover scale-110"
             autoPlay
             muted
@@ -103,7 +103,7 @@ const HeroSection = () => {
           >
             <source src="/Hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </Video>
         </motion.div>
         <motion.div
           className="absolute inset-0 bg-gradient-overlay"

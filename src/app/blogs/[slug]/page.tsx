@@ -1,4 +1,5 @@
 import { wisp } from "@/lib/wisp";
+import Link from "next/link";
 
 interface Params {
   slug: string;
@@ -74,7 +75,7 @@ export default async function BlogPost({ params }: { params: Params }) {
 
           {/* Back to Blogs Link */}
           <div className="mt-12 md:mt-16 text-center">
-            <a
+            <Link
               href="/blogs"
               className="inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-ochre to-ochre-dark text-white font-medium rounded-lg hover:from-ochre-dark hover:to-ochre transition-all duration-300 shadow-soft hover:shadow-card transform hover:-translate-y-0.5"
             >
@@ -92,7 +93,7 @@ export default async function BlogPost({ params }: { params: Params }) {
                 />
               </svg>
               <span>Back to All Posts</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

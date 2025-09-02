@@ -44,7 +44,8 @@ export default async function BlogsIndexPage() {
                 No Posts Yet
               </h3>
               <p className="text-muted-foreground">
-                We're working on some great content. Please check back soon!
+                We&apos;re working on some great content. Please check back
+                soon!
               </p>
             </div>
           </div>
