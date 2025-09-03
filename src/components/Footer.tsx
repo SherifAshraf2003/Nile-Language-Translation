@@ -14,11 +14,11 @@ const Footer = () => {
               <img
                 src="/logo.svg"
                 alt="Nile Language Services Logo"
-                className="h-8 w-auto sm:h-16"
+                className="h-20 w-auto  md:h-40 lg:h-64"
               />
-              <span className="text-lg sm:text-xl font-bold">
+              {/* <span className="text-lg sm:text-xl font-bold text-[#3E7A7F] ">
                 Nile Language Services
-              </span>
+              </span> */}
             </div>
             <p className="text-sm sm:text-base  mb-4 sm:mb-6 max-w-md">
               As the Nile connects lands, we connect voices. Professional
