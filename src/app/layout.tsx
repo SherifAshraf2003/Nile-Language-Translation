@@ -103,6 +103,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="sMA5svrCTUKcck-ChavFym5nDrEFdd3YH1hMjS6hp24"
+        />
+      </head>
       <body
         className={`${inter.variable} ${playfairDisplay.variable} antialiased scroll-smooth`}
       >
