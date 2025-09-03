@@ -1,4 +1,4 @@
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -28,11 +28,31 @@ const Footer = () => {
             <div className="space-y-2 text-xs sm:text-sm">
               <div className="flex items-center space-x-2">
                 <Mail className="h-3 w-3 sm:h-4 sm:w-4" />
-                <span>info@nlsindy.com</span>
+                <a href="mailto:info@nlsindy.com" className="hover:underline">
+                  info@nlsindy.com
+                </a>
+              </div>
+              <div className="flex items-start space-x-2">
+                <MapPin className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5" />
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=12175+Sunrise+Circle,+Fishers,+IN+46038"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  12175 Sunrise Circle, Fishers, IN 46038
+                </a>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="h-3 w-3 sm:h-4 sm:w-4" />
-                <span>Based in Indiana</span>
+                <Phone className="h-3 w-3 sm:h-4 sm:w-4" />
+                <div className="flex flex-col">
+                  <a href="tel:+17655864317" className="hover:underline">
+                    +1 (765) 586-4317
+                  </a>
+                  <a href="tel:+17655324052" className="hover:underline">
+                    +1 (765) 532-4052
+                  </a>
+                </div>
               </div>
             </div>
           </div>

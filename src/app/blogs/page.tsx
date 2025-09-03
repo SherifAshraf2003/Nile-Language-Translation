@@ -1,8 +1,47 @@
+import type { Metadata } from "next";
 import { wisp } from "@/lib/wisp";
 import Image from "next/image";
 import Link from "next/link";
 
 export const revalidate = 60;
+
+export const metadata: Metadata = {
+  title: "Blog - Language Services Insights & Stories",
+  description:
+    "Read insights, stories, and perspectives on language services, interpretation, and cultural connection from Nile Language Services. Expert articles on translation and interpretation.",
+  keywords: [
+    "language services blog",
+    "interpreter blog",
+    "translation blog",
+    "interpretation insights",
+    "language barrier solutions",
+    "cultural communication",
+    "interpreter stories",
+    "translation tips",
+    "language services Indiana",
+    "interpreter services blog",
+  ],
+  alternates: {
+    canonical: "/blogs",
+  },
+  openGraph: {
+    title: "Blog - Language Services Insights & Stories",
+    description:
+      "Read insights, stories, and perspectives on language services, interpretation, and cultural connection from Nile Language Services.",
+    url: "/blogs",
+    siteName: "Nile Language Services",
+    type: "website",
+    locale: "en_US",
+    images: ["/logo.jpg"],
+  },
+  twitter: {
+    card: "summary",
+    title: "Blog - Language Services Insights & Stories",
+    description:
+      "Read insights, stories, and perspectives on language services, interpretation, and cultural connection from Nile Language Services.",
+    images: ["/logo.jpg"],
+  },
+};
 
 export default async function BlogsIndexPage() {
   const result = await wisp.getPosts({ limit: 24 });

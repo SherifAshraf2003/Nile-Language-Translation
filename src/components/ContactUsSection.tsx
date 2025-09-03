@@ -32,24 +32,55 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    toast({
-      title: "Request Submitted!",
-      description:
-        "Thank you for your request. We'll get back to you within 24 hours.",
-    });
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      organization: "",
-      serviceType: "",
-      date: "",
-      location: "",
-      message: "",
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Request Submitted Successfully!",
+          description:
+            "Thank you for your request. We'll get back to you within 24 hours.",
+        });
+
+        // Reset form
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          organization: "",
+          serviceType: "",
+          date: "",
+          location: "",
+          message: "",
+        });
+      } else {
+        throw new Error(result.error || "Failed to submit request");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Submission Failed",
+        description:
+          "There was an error submitting your request. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (
@@ -375,8 +406,9 @@ const Contact = () => {
                         variant="cta"
                         size="lg"
                         className="w-full text-white"
+                        disabled={isSubmitting}
                       >
-                        Submit Request
+                        {isSubmitting ? "Submitting..." : "Submit Request"}
                       </Button>
                     </form>
                   </CardContent>

@@ -2,7 +2,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { motion, easeOut } from "framer-motion";
-import Video from "next-video";
 
 const HeroSection = () => {
   const containerVariants = {
@@ -92,7 +91,7 @@ const HeroSection = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: easeOut }}
         >
-          <Video
+          <video
             className="w-full h-full object-cover scale-110"
             autoPlay
             muted
@@ -103,7 +102,7 @@ const HeroSection = () => {
           >
             <source src="/Hero.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </Video>
+          </video>
         </motion.div>
         <motion.div
           className="absolute inset-0 bg-gradient-overlay"
