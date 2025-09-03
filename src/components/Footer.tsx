@@ -138,7 +138,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-background/20 mt-6 sm:mt-8 pt-6 sm:pt-8 text-center text-xs sm:text-sm ">
-          <p>&copy; 2024 Nile Language Services. All rights reserved.</p>
+          <p>&copy; 2025 Soar-ny. All rights reserved.</p>
         </div>
       </div>
     </footer>

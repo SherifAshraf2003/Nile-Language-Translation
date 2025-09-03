@@ -53,7 +53,7 @@ const Contact = () => {
         toast({
           title: "Request Submitted Successfully!",
           description:
-            "Thank you for your request. We'll get back to you within 24 hours.",
+            "Thank you for your request. We'll get back to you within a couple hours.",
         });
 
         // Reset form

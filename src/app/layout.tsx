@@ -5,6 +5,7 @@ import "./globals.css";
 
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -123,6 +124,7 @@ export default function RootLayout({
           <Navigation />
           <main className="flex-1">{children}</main>
           <Footer />
+          <Toaster />
         </div>
       </body>
     </html>

@@ -22,24 +22,61 @@ const JoinTeam = () => {
     additionalInfo: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [resumeFile, setResumeFile] = useState<File | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    toast({
-      title: "Application Submitted!",
-      description:
-        "Thank you for your interest. We'll review your application and get back to you soon.",
-    });
-    setFormData({
-      fullName: "",
-      email: "",
-      phone: "",
-      experience: "",
-      certifications: "",
-      languages: "",
-      availability: "",
-      additionalInfo: "",
-    });
+    setIsSubmitting(true);
+
+    try {
+      const data = new FormData();
+      Object.entries(formData).forEach(([key, value]) =>
+        data.append(key, value)
+      );
+      if (resumeFile) {
+        data.append("resume", resumeFile);
+      }
+
+      const response = await fetch("/api/join-team", {
+        method: "POST",
+        body: data,
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Application Submitted!",
+          description:
+            "Thank you for your interest. We'll review your application and get back to you soon.",
+        });
+
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          experience: "",
+          certifications: "",
+          languages: "",
+          availability: "",
+          additionalInfo: "",
+        });
+        setResumeFile(null);
+      } else {
+        throw new Error(result.error || "Failed to submit application");
+      }
+    } catch (error) {
+      console.error("Error submitting application:", error);
+      toast({
+        title: "Submission Failed",
+        description:
+          "There was an error submitting your application. Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (
@@ -297,15 +334,57 @@ const JoinTeam = () => {
                     <Label className="text-sm sm:text-base">
                       Resume/CV Upload
                     </Label>
-                    <div className="mt-2 border-2 border-dashed border-border rounded-lg p-4 sm:p-6 lg:p-8 text-center hover:border-ochre transition-colors">
+                    <label
+                      htmlFor="resume-upload"
+                      className="mt-2 block cursor-pointer border-2 border-dashed border-border rounded-lg p-4 sm:p-6 lg:p-8 text-center hover:border-ochre transition-colors"
+                    >
                       <Upload className="h-8 w-8 sm:h-12 sm:w-12 text-muted-foreground mx-auto mb-3 sm:mb-4" />
                       <p className="text-xs sm:text-sm lg:text-base text-muted-foreground">
-                        Click to upload your resume or drag and drop
+                        {resumeFile
+                          ? `Selected: ${resumeFile.name}`
+                          : "Click to upload your resume or drag and drop"}
                       </p>
                       <p className="text-xs sm:text-sm text-muted-foreground mt-2">
                         PDF, DOC, or DOCX up to 10MB
                       </p>
-                    </div>
+                      <input
+                        id="resume-upload"
+                        name="resume"
+                        type="file"
+                        accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                        className="sr-only"
+                        onChange={(e) => {
+                          const file = e.target.files?.[0] || null;
+                          if (file) {
+                            const maxBytes = 10 * 1024 * 1024;
+                            const allowed = [
+                              "application/pdf",
+                              "application/msword",
+                              "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                            ];
+                            if (file.size > maxBytes) {
+                              toast({
+                                title: "File too large",
+                                description: "Please upload a file up to 10MB.",
+                                variant: "destructive",
+                              });
+                              e.currentTarget.value = "";
+                              return;
+                            }
+                            if (!allowed.includes(file.type)) {
+                              toast({
+                                title: "Unsupported file type",
+                                description: "Upload a PDF, DOC, or DOCX file.",
+                                variant: "destructive",
+                              });
+                              e.currentTarget.value = "";
+                              return;
+                            }
+                          }
+                          setResumeFile(file);
+                        }}
+                      />
+                    </label>
                   </div>
 
                   <div>
@@ -331,8 +410,9 @@ const JoinTeam = () => {
                     variant="cta"
                     size="lg"
                     className="w-full"
+                    disabled={isSubmitting}
                   >
-                    Submit Application
+                    {isSubmitting ? "Submitting..." : "Submit Application"}
                   </Button>
                 </form>
               </CardContent>

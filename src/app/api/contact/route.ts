@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
 
     // Send email via Resend
     await resend.emails.send({
-      from: "NLS Website <no-reply@nlsindy.com>", // Use your domain email if possible
+      from: "NLS Website <info@nlsindy.com>", // Use your domain email if possible
       to: "info@nlsindy.com", // Replace with your actual inbox
       subject: `New Contact Form: ${serviceType} Request`,
       replyTo: email, // so you can reply directly to client
