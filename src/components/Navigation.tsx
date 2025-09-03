@@ -32,8 +32,10 @@ const Navigation = () => {
               src="/logo.svg"
               alt="Nile Language Services Logo"
               className="h-8 w-auto sm:h-16"
+              width={32}
+              height={32}
             />
-            <span className="text-lg sm:text-xl font-bold text-foreground">
+            <span className="text-lg   font-playfair sm:text-xl font-bold text-foreground">
               Nile Language Services
             </span>
           </Link>

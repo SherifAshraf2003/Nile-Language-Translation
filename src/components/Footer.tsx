@@ -1,5 +1,7 @@
 import { Mail, MapPin } from "lucide-react";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -73,6 +75,9 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                {/* Pay with PayPal moved to standalone CTA section below */}
+              </li>
             </ul>
           </div>
 
@@ -88,6 +93,27 @@ const Footer = () => {
               <li>Legal Interpretation</li>
               <li>Business Interpretation</li>
             </ul>
+          </div>
+        </div>
+
+        {/* Standalone PayPal CTA */}
+        <div className="mt-8 sm:mt-10">
+          <div className=" border border-background/20 rounded-lg px-4 py-6 sm:px-6 sm:py-8 flex items-center justify-center text-center">
+            <Link
+              href="https://www.paypal.com/paypalme/nilelanguageservices"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 text-white font-semibold rounded-md shadow-md bg-[#0070BA] hover:bg-[#005EA6] transition-colors duration-200"
+            >
+              <Image
+                src="/PayPal-logo.svg"
+                alt="Pay with PayPal"
+                width={24}
+                height={24}
+                className="mr-2"
+              />
+              Pay with PayPal
+            </Link>
           </div>
         </div>
 
