@@ -35,12 +35,12 @@ const Footer = () => {
               <div className="flex items-start space-x-2">
                 <MapPin className="h-3 w-3 sm:h-4 sm:w-4 mt-0.5" />
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=12175+Sunrise+Circle,+Fishers,+IN+46038"
+                  href="https://www.google.com/maps/search/?api=1&query=Indianapolis, Indiana"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:underline"
                 >
-                  12175 Sunrise Circle, Fishers, IN 46038
+                  Indianapolis, Indiana
                 </a>
               </div>
               <div className="flex items-center space-x-2">
