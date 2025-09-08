@@ -4,11 +4,14 @@ export async function GET(request: NextRequest) {
   const robotsTxt = `User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://www.nlsindy.com/sitemap.xml
+# Disallow framework & API routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /static/
 
-# Host
-Host: https://www.nlsindy.com`;
+# Primary Sitemap (includes pages + blogs)
+Sitemap: https://www.nlsindy.com/sitemap.xml
+`;
 
   return new Response(robotsTxt, {
     headers: {

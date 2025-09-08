@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -25,15 +26,9 @@ export const metadata: Metadata = {
   },
   description:
     "Professional onsite and virtual interpretation services in Indiana. Nile Language Services connects voices across languages for businesses, courts, and communities.",
-  keywords: [
-    "Language Services Indiana",
-    "Interpreter Indiana",
-    "Court Interpreter",
-    "Onsite Interpretation",
-    "Virtual Interpretation",
-    "Translation and Interpretation Indiana",
-    "Business Interpreter Indianapolis",
-  ],
+  alternates: {
+    canonical: "https://www.nlsindy.com/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -58,6 +53,11 @@ export const metadata: Metadata = {
       "Certified interpreters in Indiana. Onsite and virtual services across multiple languages.",
     images: ["/logo.jpg"],
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -65,11 +65,15 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // LocalBusiness JSON-LD for local SEO
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Nile Language Services",
     url: "https://www.nlsindy.com",
+    logo: "https://www.nlsindy.com/logo.jpg",
+    image: "https://www.nlsindy.com/logo.jpg",
+    email: "info@nlsindy.com",
     telephone: ["+1 765-586-4317", "+1 765-532-4052"],
     address: {
       "@type": "PostalAddress",
@@ -79,32 +83,41 @@ export default function RootLayout({
       postalCode: "46038",
       addressCountry: "US",
     },
-    image: "https://www.nlsindy.com/logo.jpg",
-    sameAs: [],
     areaServed: ["Indiana", "United States", "Worldwide"],
     description:
-      "Professional onsite and virtual interpretation services in Indiana. Certified & qualified interpreters for medical, legal, business, and community needs.",
+      "Professional onsite and virtual interpretation services in Indiana. Certified interpreters for medical, legal, business, education, and community needs.",
     contactPoint: [
       {
         "@type": "ContactPoint",
         telephone: "+1 765-586-4317",
         contactType: "customer service",
         areaServed: ["US"],
-        availableLanguage: ["English"],
+        availableLanguage: ["English", "Spanish"],
       },
       {
         "@type": "ContactPoint",
         telephone: "+1 765-532-4052",
         contactType: "customer service",
         areaServed: ["US"],
-        availableLanguage: ["English"],
+        availableLanguage: ["English", "Spanish"],
       },
     ],
+    sameAs: [],
+  };
+
+  // Organization JSON-LD for branding (favicon/logo in Google results)
+  const orgJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Nile Language Services",
+    url: "https://www.nlsindy.com",
+    logo: "https://www.nlsindy.com/favicon.ico",
   };
 
   return (
     <html lang="en">
       <head>
+        {/* Google Search Console Verification */}
         <meta
           name="google-site-verification"
           content="sMA5svrCTUKcck-ChavFym5nDrEFdd3YH1hMjS6hp24"
@@ -113,13 +126,22 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfairDisplay.variable} antialiased scroll-smooth`}
       >
-        {/* LocalBusiness JSON-LD */}
-        <script
+        {/* JSON-LD Structured Data */}
+        <Script
+          id="localbusiness-jsonld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessJsonLd),
           }}
         />
+        <Script
+          id="org-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(orgJsonLd),
+          }}
+        />
+
         <div className="min-h-screen flex flex-col">
           <Navigation />
           <main className="flex-1">{children}</main>
