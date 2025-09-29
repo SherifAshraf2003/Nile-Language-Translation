@@ -297,7 +297,7 @@ const AboutUsSection = () => {
 
           {/* Languages Grid */}
           <motion.div
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 max-w-7xl mx-auto"
+            className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 gap-3 sm:gap-4 max-w-7xl mx-auto "
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -321,12 +321,12 @@ const AboutUsSection = () => {
                 }}
                 className="group"
               >
-                <div className="bg-beige-dark hover:bg-amber-100 border-2 border-amber-500/30 hover:border-amber-500 rounded-xl p-3 sm:p-4 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                <div className="bg-beige-dark hover:bg-amber-100 border-2 border-amber-500/30 hover:border-amber-500 rounded-xl p-1 sm:p-3 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden">
                   {/* Subtle gradient overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-ochre/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div className="relative z-10">
-                    <p className="text-sm sm:text-base font-medium text-text-primary group-hover:text-amber-800 transition-colors duration-300 text-center leading-tight">
+                    <p className="text-xs sm:text-base font-medium text-text-primary group-hover:text-amber-800 transition-colors duration-300 text-center leading-tight">
                       {language}
                     </p>
                   </div>

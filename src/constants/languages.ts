@@ -6,7 +6,6 @@ export const SUPPORTED_LANGUAGES = [
   "ASL",
   "Bengali",
   "Belarusian",
-  "Bosnian / Croatian / Serbian",
   "Bulgarian",
   "Burmese",
   "Cambodian",
