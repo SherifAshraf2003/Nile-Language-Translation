@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { motion, easeOut, easeInOut } from "framer-motion";
+import { SUPPORTED_LANGUAGES } from "@/constants/languages";
 
 const AboutUsSection = () => {
   const reasons = [
@@ -231,6 +232,107 @@ const AboutUsSection = () => {
                 </motion.div>
               </div>
             </motion.div>
+          </motion.div>
+        </motion.div>
+
+        {/* Languages We Offer */}
+        <motion.div
+          className="text-center mb-16 sm:mb-20"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <motion.h3
+            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary mb-8 sm:mb-12 bg-gradient-to-r from-text-primary to-ochre bg-clip-text"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            Languages We Offer
+          </motion.h3>
+
+          <motion.div
+            className="max-w-4xl mx-auto mb-12 sm:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <motion.p
+              className="text-base sm:text-lg lg:text-xl text-text-secondary leading-relaxed mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              Below is a selection of the languages we currently provide. If the
+              language you need is not listed, feel free to reach out. We are
+              constantly expanding our network to meet client needs.
+            </motion.p>
+
+            <motion.p
+              className="text-base sm:text-lg lg:text-xl text-text-secondary leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+            >
+              We are also welcoming{" "}
+              <span className="font-semibold text-amber-800">
+                Freelance Interpreters
+              </span>{" "}
+              to collaborate with us. If you speak any of these languages and
+              are interested in joining our growing network, please visit our{" "}
+              <Link
+                href="/join-team"
+                className="text-amber-800 hover:text-ochre transition-colors duration-300 font-semibold underline decoration-2 underline-offset-2"
+              >
+                Join Our Team
+              </Link>{" "}
+              page to connect with us and learn more.
+            </motion.p>
+          </motion.div>
+
+          {/* Languages Grid */}
+          <motion.div
+            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-3 sm:gap-4 max-w-7xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            {SUPPORTED_LANGUAGES.map((language, index) => (
+              <motion.div
+                key={language}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.8,
+                  ease: "easeOut",
+                }}
+                whileHover={{
+                  y: -3,
+                  scale: 1.02,
+                  transition: { duration: 0.2, ease: "easeOut" },
+                }}
+                className="group"
+              >
+                <div className="bg-beige-dark hover:bg-amber-100 border-2 border-amber-500/30 hover:border-amber-500 rounded-xl p-3 sm:p-4 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                  {/* Subtle gradient overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-ochre/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  <div className="relative z-10">
+                    <p className="text-sm sm:text-base font-medium text-text-primary group-hover:text-amber-800 transition-colors duration-300 text-center leading-tight">
+                      {language}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
 
