@@ -13,7 +13,7 @@ export const SUPPORTED_LANGUAGES = [
   "Cantonese",
   "Mandarin",
   "Shanghainese",
-  "Creole",
+  "Haitian Creole",
   "Czech",
   "Danish",
   "Dari",
@@ -65,4 +65,6 @@ export const SUPPORTED_LANGUAGES = [
   "Ukrainian",
   "Urdu",
   "Vietnamese",
+  "Bosnian",
+  "serbian",
 ] as const;

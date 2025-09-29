@@ -7,12 +7,22 @@ import {
   Globe,
   Award,
   CircleDollarSign,
+  ChevronDown,
+  ChevronUp,
 } from "lucide-react";
 import Link from "next/link";
-import { motion, easeOut, easeInOut } from "framer-motion";
+import { motion, easeOut, easeInOut, AnimatePresence } from "framer-motion";
 import { SUPPORTED_LANGUAGES } from "@/constants/languages";
+import { useState } from "react";
 
 const AboutUsSection = () => {
+  const [showAllLanguages, setShowAllLanguages] = useState(false);
+  const INITIAL_LANGUAGES_COUNT = 24; // Show 4 rows of 6 languages initially
+
+  const displayedLanguages = showAllLanguages
+    ? SUPPORTED_LANGUAGES
+    : SUPPORTED_LANGUAGES.slice(0, INITIAL_LANGUAGES_COUNT);
+
   const reasons = [
     {
       icon: CircleDollarSign,
@@ -297,43 +307,84 @@ const AboutUsSection = () => {
 
           {/* Languages Grid */}
           <motion.div
-            className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 gap-3 sm:gap-4 max-w-7xl mx-auto "
+            className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-7 xl:grid-cols-8 gap-3 sm:gap-4 max-w-7xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            {SUPPORTED_LANGUAGES.map((language, index) => (
-              <motion.div
-                key={language}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.8,
-                  ease: "easeOut",
-                }}
-                whileHover={{
-                  y: -3,
-                  scale: 1.02,
-                  transition: { duration: 0.2, ease: "easeOut" },
-                }}
-                className="group"
-              >
-                <div className="bg-beige-dark hover:bg-amber-100 border-2 border-amber-500/30 hover:border-amber-500 rounded-xl p-1 sm:p-3 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden">
-                  {/* Subtle gradient overlay on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-ochre/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <AnimatePresence mode="sync">
+              {displayedLanguages.map((language, index) => (
+                <motion.div
+                  key={language}
+                  layout
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{
+                    duration: 0.3,
+                    delay: showAllLanguages ? 0 : Math.min(index * 0.02, 0.5),
+                    ease: "easeOut",
+                    layout: { duration: 0.3 },
+                  }}
+                  whileHover={{
+                    y: -3,
+                    scale: 1.02,
+                    transition: { duration: 0.2, ease: "easeOut" },
+                  }}
+                  className="group"
+                >
+                  <div className="bg-beige-dark hover:bg-amber-100 border-2 border-amber-500/30 hover:border-amber-500 rounded-xl p-1 sm:p-3 shadow-md hover:shadow-lg transition-all duration-300 relative overflow-hidden">
+                    {/* Subtle gradient overlay on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-ochre/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  <div className="relative z-10">
-                    <p className="text-xs sm:text-base font-medium text-text-primary group-hover:text-amber-800 transition-colors duration-300 text-center leading-tight">
-                      {language}
-                    </p>
+                    <div className="relative z-10">
+                      <p className="text-xs sm:text-base font-medium text-text-primary group-hover:text-amber-800 transition-colors duration-300 text-center leading-tight">
+                        {language}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </motion.div>
+
+          {/* Show More/Less Button */}
+          {SUPPORTED_LANGUAGES.length > INITIAL_LANGUAGES_COUNT && (
+            <motion.div
+              className="flex justify-center mt-8 sm:mt-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 1.0 }}
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
+                <Button
+                  onClick={() => setShowAllLanguages(!showAllLanguages)}
+                  className="bg-amber-800 hover:bg-amber-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 px-6 py-3 rounded-full flex items-center gap-2"
+                  size="lg"
+                >
+                  {showAllLanguages ? (
+                    <>
+                      Show Less Languages
+                      <ChevronUp className="h-4 w-4" />
+                    </>
+                  ) : (
+                    <>
+                      Show More Languages (
+                      {SUPPORTED_LANGUAGES.length - INITIAL_LANGUAGES_COUNT}{" "}
+                      more)
+                      <ChevronDown className="h-4 w-4" />
+                    </>
+                  )}
+                </Button>
+              </motion.div>
+            </motion.div>
+          )}
         </motion.div>
 
         {/* Why Choose NLS */}
