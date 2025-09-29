@@ -66,5 +66,5 @@ export const SUPPORTED_LANGUAGES = [
   "Urdu",
   "Vietnamese",
   "Bosnian",
-  "serbian",
+  "Serbian",
 ] as const;

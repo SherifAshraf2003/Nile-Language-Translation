@@ -253,15 +253,15 @@ const AboutUsSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <motion.h3
-            className="text-2xl sm:text-3xl lg:text-4xl font-bold text-text-primary mb-8 sm:mb-12 bg-gradient-to-r from-text-primary to-ochre bg-clip-text"
+          <motion.h2
+            className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-text-primary mb-8 sm:mb-12 bg-gradient-to-r from-text-primary to-ochre bg-clip-text"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Languages We Offer
-          </motion.h3>
+          </motion.h2>
 
           <motion.div
             className="max-w-4xl mx-auto mb-12 sm:mb-16"
