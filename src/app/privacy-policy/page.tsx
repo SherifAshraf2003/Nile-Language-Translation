@@ -270,7 +270,7 @@ const PrivacyPolicyPage = () => {
                         <Phone className="w-5 h-5" />
                       </div>
                       <span className="text-base sm:text-lg">
-                        (765) 588-6470
+                        (765) 586-4317
                       </span>
                     </a>
 

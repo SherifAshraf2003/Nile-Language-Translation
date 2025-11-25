@@ -7,6 +7,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
+import PrivacyConsentPopup from "@/components/PrivacyConsentPopup";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -147,6 +148,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
           <Toaster />
+          <PrivacyConsentPopup />
         </div>
       </body>
     </html>
