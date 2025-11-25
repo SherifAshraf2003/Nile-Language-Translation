@@ -62,6 +62,15 @@ const PrivacyPolicyPage = () => {
     },
     {
       id: 4,
+      title: "Mobile Information and SMS Consent",
+      content: [
+        "No mobile information will be shared with third parties/affiliates for marketing/promotional purposes.",
+        "All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.",
+      ],
+      isSingleParagraph: true,
+    },
+    {
+      id: 5,
       title: "How We Protect Your Information",
       content: [
         "We implement industry-standard administrative, technical, and physical safeguards to protect your data.",
@@ -69,7 +78,7 @@ const PrivacyPolicyPage = () => {
       isSingleParagraph: true,
     },
     {
-      id: 5,
+      id: 6,
       title: "Cookies and Tracking",
       content: [
         "Our website may use cookies to improve service quality and analytics. Users can disable cookies through their browser settings at any time.",
@@ -77,7 +86,7 @@ const PrivacyPolicyPage = () => {
       isSingleParagraph: true,
     },
     {
-      id: 6,
+      id: 7,
       title: "Your Rights",
       intro: "Depending on your location, you may have the right to:",
       content: [
@@ -232,7 +241,7 @@ const PrivacyPolicyPage = () => {
                 {/* Section Header */}
                 <div className="flex items-start gap-4 mb-8">
                   <span className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-white/20 text-white rounded-xl flex items-center justify-center font-bold text-lg sm:text-xl shadow-md backdrop-blur-sm">
-                    7
+                    8
                   </span>
                   <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white pt-1 sm:pt-2">
                     Contact Us
