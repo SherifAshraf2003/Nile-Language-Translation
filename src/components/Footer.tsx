@@ -96,7 +96,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                {/* Pay with PayPal moved to standalone CTA section below */}
+                <Link
+                  href="/privacy-policy"
+                  className=" hover:text-background transition-colors"
+                >
+                  Privacy Policy
+                </Link>
               </li>
             </ul>
           </div>

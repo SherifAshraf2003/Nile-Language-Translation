@@ -410,6 +410,22 @@ const Contact = () => {
                       >
                         {isSubmitting ? "Submitting..." : "Submit Request"}
                       </Button>
+
+                      {/* SMS Consent Disclaimer */}
+                      <p className="text-xs text-text-muted leading-relaxed mt-4">
+                        By providing a telephone number and submitting the form,
+                        you are consenting to be contacted by SMS text message
+                        and agreeing to our{" "}
+                        <Link
+                          href="/privacy-policy"
+                          className="text-amber-700 hover:text-amber-600 underline underline-offset-2"
+                        >
+                          Privacy Policy
+                        </Link>
+                        . Message frequency may vary. Message and data rates may
+                        apply. Reply STOP to opt out of further messaging. Reply
+                        HELP for more information.
+                      </p>
                     </form>
                   </CardContent>
                 </Card>

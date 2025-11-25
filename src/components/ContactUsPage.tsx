@@ -16,6 +16,7 @@ import {
 import { useToast } from "@/app/hooks/use-toast";
 import { Mail, MessageCircle, Phone } from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const ContactUsPage = () => {
   const { toast } = useToast();
@@ -340,9 +341,26 @@ const ContactUsPage = () => {
                         variant="cta"
                         size="lg"
                         className="w-full text-white"
+                        disabled={isSubmitting}
                       >
-                        Submit Request
+                        {isSubmitting ? "Submitting..." : "Submit Request"}
                       </Button>
+
+                      {/* SMS Consent Disclaimer */}
+                      <p className="text-xs text-text-muted leading-relaxed mt-4">
+                        By providing a telephone number and submitting the form,
+                        you are consenting to be contacted by SMS text message
+                        and agreeing to our{" "}
+                        <Link
+                          href="/privacy-policy"
+                          className="text-amber-700 hover:text-amber-600 underline underline-offset-2"
+                        >
+                          Privacy Policy
+                        </Link>
+                        . Message frequency may vary. Message and data rates may
+                        apply. Reply STOP to opt out of further messaging. Reply
+                        HELP for more information.
+                      </p>
                     </form>
                   </CardContent>
                 </Card>
