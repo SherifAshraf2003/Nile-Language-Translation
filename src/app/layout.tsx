@@ -123,6 +123,20 @@ export default function RootLayout({
           name="google-site-verification"
           content="sMA5svrCTUKcck-ChavFym5nDrEFdd3YH1hMjS6hp24"
         />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-7MR5RYX2N3"
+          async
+          strategy="afterInteractive"
+        />
+        <Script id="ga-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-7MR5RYX2N3');
+          `}
+        </Script>
       </head>
       <body
         className={`${inter.variable} ${playfairDisplay.variable} antialiased scroll-smooth`}
